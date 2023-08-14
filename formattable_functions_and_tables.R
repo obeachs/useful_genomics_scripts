@@ -9,7 +9,7 @@ library(formattable)
 library(webshot)
 library(tidyr)
 
-
+#YOU NEED GOOGLE CHROME INSTALLED FOR THIS
 #Function to export the table as png
 export_formattable <- function(f, file, width = "100%", height = NULL, 
                                background = "white", delay = 0.2){

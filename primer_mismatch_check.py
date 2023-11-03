@@ -3,10 +3,10 @@ import pandas as pd
 import os
 import sys
 import argparse
-import matplotlib.pyplot as plt
-import seaborn as sns
 import Bio
 from Bio import Align
+from Bio.Seq import Seq
+
 from Bio import SeqIO
 
 #Seeting up the parameters for the alignment, nothing fancy - just want to make sure it's
@@ -20,7 +20,8 @@ aligner.mismatch_score = -1
 aligner.open_gap_score = -1
 aligner.extend_gap_score = -1
 parser = argparse.ArgumentParser(description = 'fastax_len_filter.py Parameters\n')
-parser.add_argument('--i', required = True, type = str)
+parser.add_argument('--f', required = True, type = str)
+parser.add_argument('--r', required = True, type = str)
 parser.add_argument('--fasta', required =True, type=str)
 args =parser.parse_args()
 
@@ -46,18 +47,23 @@ def fasta_condenser(fasta, tair=0):
 
 
 fasta = fasta_condenser(args.fasta)
-i = args.i
+f = args.f
+r = args.r
 
 
 #For each dna sequence in the 'Seq' column of fasta, check if the i string is present in it, allowi for up to 4 mismatches
 #If it is present, add the TAIR_ID to the list 'matches'
 matches = []
 #If the score is greater than the length of the sequence -4, then it is likely a match
-aim = len(i)
-print('Primer length is ' + str(aim) + '\n')
+faim = len(f)
+raim = len(r)
+
 for j in range(len(fasta['Seq'])):
-    alignments = alignments = aligner.align(fasta['Seq'][j], i)
-    if alignments.score > aim-4:
+    falignments= aligner.align(fasta['Seq'][j], f)
+    ralignments= aligner.align(Seq(fasta['Seq'][j]).reverse_complement(),r)
+    if falignments.score > faim-5 and ralignments.score > raim-5:
         print(fasta['ID'][j])
-        print(alignments[0])
-        print(alignments.score)
+        print('Forward primer:  ' + str(falignments.score))
+        print('Reverse primer:  ' + str(ralignments.score))
+        print(falignments[0])
+        print(ralignments[0])

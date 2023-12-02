@@ -1,0 +1,11 @@
+library(ChIPpeakAnno)
+library(rlang)
+library(org.At.tair.db)
+library(biomaRt)
+btpeaks <- read.delim("~/Desktop/Work/ChIPSeqKNU/btpeaks_homered")
+kmpeaks <- read.delim("~/Desktop/Work/ChIPSeqKNU/KMpeaks_retry_align_homered")
+bedfile <- read.delim("~/Desktop/Work/ChIPSeqKNU/KNUGFP8D1_trimmed_hisat2_filtered_sorted_rmdupvKNUGFP8DINPUT1_trimmed_hisat2_filtered_sorted_rmdup_summits.bed")
+sharedBT_newkm <- dplyr::semi_join(kmpeaks, btpeaks, by='Gene.Name')
+common <- intersect(kmpeaks$PeakID..cmd.annotatePeaks.pl.KMnew_peaks_fixed.tair10., sharedBT_newkm$PeakID..cmd.annotatePeaks.pl.KMnew_peaks_fixed.tair10.)  
+shared_peaks_bed <- bedfile[bedfile$peakname %in% sharedBT_newkm$PeakID..cmd.annotatePeaks.pl.KMnew_peaks_fixed.tair10.,]
+write.table(shared_peaks_bed, "~/Desktop/Work/ChIPSeqKNU/sharedpeaksKMBT.bed", quote = FALSE, sep = "\t", row.names = FALSE)

@@ -1,0 +1,72 @@
+import sys
+import Bio
+import re
+import itertools
+from Bio import SeqIO
+from Bio import SearchIO
+from Bio.Seq import Seq
+from Bio.Seq import UnknownSeq
+from Bio.Blast import NCBIXML
+import numpy as np
+import pandas as pd
+import itertools
+import argparse
+import subprocess
+import os
+from os import listdir
+from Bio import pairwise2
+
+
+def fasta_condenser(fasta, tair=0):
+    '''Preferably use this on the fasta file that has less info/annotation
+    with it - usually the query fasta'''
+    namelist = []
+    seqlist = []
+    if tair==0:
+        with open (fasta,'r') as fa:
+            for seq in SeqIO.parse(fa,'fasta'):
+                namelist.append(seq.id)
+                seqlist.append(str(seq.seq))
+        df = pd.DataFrame(list(zip(namelist, seqlist)),columns =['ID', 'Seq'])
+    else:
+        with open (fasta,'r') as fa:
+            for seq in SeqIO.parse(fa,'fasta'):
+                namelist.append(seq.id[0:9])
+                seqlist.append(str(seq.seq))
+        df = pd.DataFrame(list(zip(namelist, seqlist)),columns =['TAIR_ID', 'TAIR_Seq'])
+    return df
+
+
+one = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/nanopore_reads_corrected/5000bp_SRR1799170_used/all_nanopores_combind5000_k17k25k31.fa'
+two = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/nanopore_reads_corrected/5000bp_maingenome_split/all_nanopores_combind5000_k17k25k31_maingenome_split.fa'
+outfolder = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/nanopore_reads_corrected/correction_comparisons/'
+
+
+
+srr = fasta_condenser(one)
+spl = fasta_condenser(two)
+srr['length'] = len(srr['Seq'])
+sequence = srr['Seq'].to_list()
+num = 0
+max = 0
+for i in sequence:
+    num = num + len(i)
+    if len(i) > max:
+        max = len(i)
+print(str(num/len(sequence)))
+print(str(max))
+
+# for i in range(len(spl['Seq'])):
+#     fasta = outfolder + '_' + srr['ID'][i]
+#     srr_id = srr['ID'][i] + '_srr'
+#     spl_id = spl['ID'][i] + '_spl'
+#     with open(fasta,'w+') as fasta_out:
+#         fasta_out.write('>' + srr_id + '\n' + srr['Seq'][i] + '\n' + '>' + spl_id + '\n' + spl['Seq'][i])
+
+
+# os.listdir(outfolder)
+
+# aligned_fasta = fasta.split('.')[0] + '_' + check + '_aligned'
+# align = AlignIO.read(result_fasta, "fasta")
+# with open(aligned_fasta,'w+') as align_final:
+#     SeqIO.write(align, align_final, 'nexus')

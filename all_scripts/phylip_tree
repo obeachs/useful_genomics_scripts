@@ -1,0 +1,37 @@
+import skbio
+import Bio 
+from Bio import SeqIO
+import pandas as pd
+from Bio import AlignIO
+
+
+
+
+
+def fasta_condenser(fasta, tair=0):
+    '''Preferably use this on the fasta file that has less info/annotation
+    with it - usually the query fasta'''
+    namelist = []
+    seqlist = []
+    if tair==0:
+        with open (fasta,'r') as fa:
+            for seq in SeqIO.parse(fa,'fasta'):
+                namelist.append(seq.id)
+                seqlist.append(str(seq.seq))
+        df = pd.DataFrame(list(zip(namelist, seqlist)),columns =['ID', 'Seq'])
+    else:
+        with open (fasta,'r') as fa:
+            for seq in SeqIO.parse(fa,'fasta'):
+                namelist.append(seq.id[0:9])
+                seqlist.append(str(seq.seq))
+        df = pd.DataFrame(list(zip(namelist, seqlist)),columns =['TAIR_ID', 'TAIR_Seq'])
+    return df
+
+fasta = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/nanopore_reads_corrected/phylogeny/AG_hits_clustalo.fa'
+out = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/nanopore_reads_corrected/phylogeny/AG_hits_nexus.fa'
+fa = fasta_condenser(fasta)
+
+
+alignment = AlignIO.read(open(out),'nexus')
+for record in alignment:
+    print(record.seq)

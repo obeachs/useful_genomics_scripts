@@ -1,0 +1,22 @@
+#!/bin/bash/
+
+# initialize a variable with an intuitive name to store the name of the input fastq file
+
+
+fq1=$1
+fq2=$2
+dir=${fq%/*}
+VARIABLE=${3:-$fq%/*}
+genome=~/refs/TAIR10_Chr_all.fa
+
+
+
+#Just extracting file names correctly and makinng directories for the intermediary files of the analysis
+title1=`basename $fq1 .fasta`
+title2='basename $fq2 .fasta
+echo 'Analysing sample $title'
+echo $dir/
+echo $VARIABLE
+
+mkdir -p $dir/fastqc_results
+mkdir -p $dir/bamfiles

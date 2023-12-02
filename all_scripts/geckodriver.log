@@ -1,0 +1,1488 @@
+1671033927175	geckodriver	INFO	Listening on 127.0.0.1:52737
+1671033927497	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52738" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileUcyUjc"
+1671033928894	Marionette	INFO	Marionette enabled
+1671033928984	Marionette	INFO	Listening on port 52748
+Read port: 52748
+WebDriver BiDi listening on ws://127.0.0.1:52738
+1671033929608	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileUcyUjc/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52738/devtools/browser/3306b6ef-baaf-4973-94ae-9aca28023e85
+1671033956385	Marionette	INFO	Stopped listening on port 52748
+1671034081341	geckodriver	INFO	Listening on 127.0.0.1:52856
+1671034081855	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52857" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile19Fdgy"
+1671034082843	Marionette	INFO	Marionette enabled
+1671034082874	Marionette	INFO	Listening on port 52866
+Read port: 52866
+WebDriver BiDi listening on ws://127.0.0.1:52857
+1671034083366	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile19Fdgy/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52857/devtools/browser/97eba12c-439c-4bf6-a61e-7d823c44ca7b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034197999	geckodriver	INFO	Listening on 127.0.0.1:52994
+1671034198439	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52995" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile2ca8zH"
+1671034199503	Marionette	INFO	Marionette enabled
+1671034199551	Marionette	INFO	Listening on port 53005
+Read port: 53005
+WebDriver BiDi listening on ws://127.0.0.1:52995
+1671034200082	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile2ca8zH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52995/devtools/browser/69b23c24-7002-4464-9229-4455daf17a60
+1671034291567	geckodriver	INFO	Listening on 127.0.0.1:53071
+1671034291982	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53072" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiletMjCmB"
+1671034293789	Marionette	INFO	Marionette enabled
+1671034294457	Marionette	INFO	Listening on port 53079
+Read port: 53079
+WebDriver BiDi listening on ws://127.0.0.1:53072
+1671034294716	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiletMjCmB/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53072/devtools/browser/b5077d46-d765-4030-bef6-a3596e1bdfbf
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034299483	geckodriver	INFO	Listening on 127.0.0.1:53125
+1671034299963	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53126" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilexVaEVO"
+1671034300837	Marionette	INFO	Marionette enabled
+1671034301023	Marionette	INFO	Listening on port 53132
+Read port: 53132
+WebDriver BiDi listening on ws://127.0.0.1:53126
+1671034301907	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilexVaEVO/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53126/devtools/browser/b50ce953-5565-4487-8490-87254a9c50eb
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034307059	geckodriver	INFO	Listening on 127.0.0.1:53178
+1671034307569	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53179" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9PoLg4"
+1671034308592	Marionette	INFO	Marionette enabled
+1671034308656	Marionette	INFO	Listening on port 53187
+Read port: 53187
+WebDriver BiDi listening on ws://127.0.0.1:53179
+1671034309410	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9PoLg4/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53179/devtools/browser/46b41dfc-dcd0-4e6d-8244-42d9b436bd69
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034315588	geckodriver	INFO	Listening on 127.0.0.1:53241
+1671034316092	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53242" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileGjQWZ1"
+1671034317370	Marionette	INFO	Marionette enabled
+1671034317581	Marionette	INFO	Listening on port 53250
+Read port: 53250
+Read port: 53250
+WebDriver BiDi listening on ws://127.0.0.1:53242
+1671034318911	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileGjQWZ1/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53242/devtools/browser/305b9842-046e-45bb-9a7f-1663e4336ff0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034326059	geckodriver	INFO	Listening on 127.0.0.1:53307
+1671034326531	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53308" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilej1Occf"
+1671034327929	Marionette	INFO	Marionette enabled
+1671034328027	Marionette	INFO	Listening on port 53317
+Read port: 53317
+Read port: 53317
+WebDriver BiDi listening on ws://127.0.0.1:53308
+1671034329716	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilej1Occf/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53308/devtools/browser/ed5427d6-0f01-4f18-975a-964b2ff40c7d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034336281	geckodriver	INFO	Listening on 127.0.0.1:53360
+1671034336730	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53361" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilemZjUKE"
+1671034338311	Marionette	INFO	Marionette enabled
+1671034338398	Marionette	INFO	Listening on port 53372
+Read port: 53372
+WebDriver BiDi listening on ws://127.0.0.1:53361
+Read port: 53372
+1671034339870	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilemZjUKE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53361/devtools/browser/83749523-b2fe-4d3b-b161-de219c5c31b2
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034345799	geckodriver	INFO	Listening on 127.0.0.1:53416
+1671034346223	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53417" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileqX0ak3"
+1671034347296	Marionette	INFO	Marionette enabled
+1671034347505	Marionette	INFO	Listening on port 53427
+Read port: 53427
+Read port: 53427
+WebDriver BiDi listening on ws://127.0.0.1:53417
+1671034349460	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileqX0ak3/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53417/devtools/browser/b2cf87ba-32f0-4aa7-95a5-6034eb9caefe
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034359867	geckodriver	INFO	Listening on 127.0.0.1:53476
+1671034360365	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53477" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJZ76J9"
+1671034362476	Marionette	INFO	Marionette enabled
+1671034362618	Marionette	INFO	Listening on port 53486
+Read port: 53486
+Read port: 53486
+WebDriver BiDi listening on ws://127.0.0.1:53477
+1671034364337	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJZ76J9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53477/devtools/browser/4f245dc0-058a-482c-a362-240d6caa908c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034370497	geckodriver	INFO	Listening on 127.0.0.1:53531
+1671034370860	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53532" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilepORuNL"
+1671034375039	Marionette	INFO	Marionette enabled
+1671034375151	Marionette	INFO	Listening on port 53546
+Read port: 53546
+WebDriver BiDi listening on ws://127.0.0.1:53532
+1671034376067	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilepORuNL/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53532/devtools/browser/420930ac-4e05-49c9-a7b9-658ca319a319
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034382874	geckodriver	INFO	Listening on 127.0.0.1:53593
+1671034383372	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53594" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilevgVutz"
+1671034384750	Marionette	INFO	Marionette enabled
+1671034384831	Marionette	INFO	Listening on port 53602
+Read port: 53602
+WebDriver BiDi listening on ws://127.0.0.1:53594
+Read port: 53602
+1671034386793	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilevgVutz/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53594/devtools/browser/085f36fb-5ba2-40bf-9175-1cf8915f2217
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034392266	geckodriver	INFO	Listening on 127.0.0.1:53649
+1671034392747	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53650" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9k72HI"
+1671034395117	Marionette	INFO	Marionette enabled
+1671034395223	Marionette	INFO	Listening on port 53659
+Read port: 53659
+WebDriver BiDi listening on ws://127.0.0.1:53650
+1671034396124	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9k72HI/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53650/devtools/browser/23a52f27-f459-4184-8ab7-67fc80b4dd8e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034401247	geckodriver	INFO	Listening on 127.0.0.1:53702
+1671034401716	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53703" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileMNCF1l"
+1671034402968	Marionette	INFO	Marionette enabled
+1671034403032	Marionette	INFO	Listening on port 53716
+Read port: 53716
+WebDriver BiDi listening on ws://127.0.0.1:53703
+Read port: 53716
+1671034404629	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileMNCF1l/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53703/devtools/browser/c3e6a0bf-03a4-4ea8-b93a-439b7a50f00f
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034410780	geckodriver	INFO	Listening on 127.0.0.1:53762
+1671034411261	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53763" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile33635G"
+1671034412095	Marionette	INFO	Marionette enabled
+1671034412145	Marionette	INFO	Listening on port 53770
+Read port: 53770
+WebDriver BiDi listening on ws://127.0.0.1:53763
+Read port: 53770
+1671034413575	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile33635G/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53763/devtools/browser/36a5955e-0711-42d2-91da-9950a1ca8897
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034418808	geckodriver	INFO	Listening on 127.0.0.1:53815
+1671034419311	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53816" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileFqYXsQ"
+1671034420034	Marionette	INFO	Marionette enabled
+1671034420080	Marionette	INFO	Listening on port 53827
+Read port: 53827
+WebDriver BiDi listening on ws://127.0.0.1:53816
+1671034421404	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileFqYXsQ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53816/devtools/browser/a67a3784-c374-4e02-9282-321b7c9f461a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034426458	geckodriver	INFO	Listening on 127.0.0.1:53872
+1671034426969	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53873" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIPCYJy"
+1671034427891	Marionette	INFO	Marionette enabled
+1671034427916	Marionette	INFO	Listening on port 53884
+Read port: 53884
+WebDriver BiDi listening on ws://127.0.0.1:53873
+1671034428495	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIPCYJy/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53873/devtools/browser/1c0e1e75-4032-4cd3-b064-f14a132dcc6a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034434241	geckodriver	INFO	Listening on 127.0.0.1:53928
+1671034434727	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53929" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyVmDCn"
+1671034435477	Marionette	INFO	Marionette enabled
+1671034435529	Marionette	INFO	Listening on port 53938
+Read port: 53938
+Read port: 53938
+WebDriver BiDi listening on ws://127.0.0.1:53929
+1671034436759	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyVmDCn/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53929/devtools/browser/ec04f30b-42b6-472c-98a9-b9f8cd8f4599
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034442329	geckodriver	INFO	Listening on 127.0.0.1:53982
+1671034442843	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "53983" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilet6dAqE"
+1671034443857	Marionette	INFO	Marionette enabled
+1671034443912	Marionette	INFO	Listening on port 53996
+Read port: 53996
+WebDriver BiDi listening on ws://127.0.0.1:53983
+1671034444455	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilet6dAqE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53983/devtools/browser/12092e9d-9d66-4e1b-abbb-f6d7f79dd52c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034449723	geckodriver	INFO	Listening on 127.0.0.1:54039
+1671034450231	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54040" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilepZn8yS"
+1671034451324	Marionette	INFO	Marionette enabled
+1671034451387	Marionette	INFO	Listening on port 54052
+Read port: 54052
+WebDriver BiDi listening on ws://127.0.0.1:54040
+1671034452111	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilepZn8yS/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54040/devtools/browser/0c6032f3-2611-4fb7-821d-4b8269737c7c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034457193	geckodriver	INFO	Listening on 127.0.0.1:54095
+1671034457694	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54096" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileucqi4a"
+1671034458849	Marionette	INFO	Marionette enabled
+1671034458962	Marionette	INFO	Listening on port 54108
+Read port: 54108
+WebDriver BiDi listening on ws://127.0.0.1:54096
+1671034459415	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileucqi4a/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54096/devtools/browser/06e57334-0de6-4f25-9932-8b14ae777e74
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034465186	geckodriver	INFO	Listening on 127.0.0.1:54150
+1671034465691	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54151" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile2npjSk"
+1671034468099	Marionette	INFO	Marionette enabled
+1671034468245	Marionette	INFO	Listening on port 54164
+Read port: 54164
+Read port: 54164
+WebDriver BiDi listening on ws://127.0.0.1:54151
+1671034469872	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile2npjSk/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54151/devtools/browser/ab2d5afb-d07f-4945-b38c-0d58dee3e762
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034475433	geckodriver	INFO	Listening on 127.0.0.1:54211
+1671034475921	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54212" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIaQfIe"
+1671034478162	Marionette	INFO	Marionette enabled
+1671034478226	Marionette	INFO	Listening on port 54233
+Read port: 54233
+WebDriver BiDi listening on ws://127.0.0.1:54212
+Read port: 54233
+1671034479773	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIaQfIe/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54212/devtools/browser/04c7571c-899b-4c36-a464-8512254f88ca
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034486306	geckodriver	INFO	Listening on 127.0.0.1:54280
+1671034486790	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54281" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJafT54"
+1671034487533	Marionette	INFO	Marionette enabled
+1671034487581	Marionette	INFO	Listening on port 54292
+Read port: 54292
+WebDriver BiDi listening on ws://127.0.0.1:54281
+Read port: 54292
+1671034488822	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJafT54/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54281/devtools/browser/e5e80c73-1f30-4d06-8276-ee18a9b14fde
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671034494073	geckodriver	INFO	Listening on 127.0.0.1:54339
+1671034494542	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54340" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO"
+1671034495478	Marionette	INFO	Marionette enabled
+1671034495828	Marionette	INFO	Listening on port 54348
+Read port: 54348
+Read port: 54348
+WebDriver BiDi listening on ws://127.0.0.1:54340
+1671034497487	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/search.json.mozlz4", (void 0)))
+console.log: "RemoteSettingsWorker error: QuotaExceededError: IndexedDB:  execute() The current transaction exceeded its quota limitations."
+[2022-12-14T16:14:59Z ERROR glean_core] Failed to initialize Glean: An I/O error occurred: No space left on device (os error 28)
+console.error: SearchSettings: "_write: Could not write to settings file:" (new NotReadableError("Could not write chunk (size = 280) to file /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/search.json.mozlz4.tmp. The file may be corrupt.", (void 0)))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/search.json.mozlz4", (void 0)))
+console.error: "Could not write session state file " (new OperationError("Failed to backup the source file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIaQfIe/sessionstore-backups/recovery.jsonlz4) to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIaQfIe/sessionstore-backups/recovery.baklz4", (void 0))) ""
+DevTools listening on ws://127.0.0.1:54340/devtools/browser/2f1bc194-755b-4c93-ae93-762f0c262ded
+1671034500027	CDP	WARN	Failed to create /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/DevToolsActivePort (Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/DevToolsActivePort for writing)
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilet6dAqE/crashes/store.json.mozlz4.tmp for writing
+console.error: SearchSettings: "_write: Could not write to settings file:" (new NotReadableError("Could not write chunk (size = 288) to file /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/search.json.mozlz4.tmp. The file may be corrupt.", (void 0)))
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Could not write session state file " (new OperationError("Could not move temporary file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/sessionstore-backups/recovery.jsonlz4.tmp) to destination(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/sessionstore-backups/recovery.jsonlz4)", (void 0))) ""
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+JavaScript error: , line 0: NotReadableError: Could not create unique path
+geckodriver: error: Unable to write to temporary directory; consider --profile-root with a writeable directory
+geckodriver 0.32.0 
+WebDriver implementation for Firefox
+
+USAGE:
+    geckodriver [OPTIONS]
+
+OPTIONS:
+        --allow-hosts <ALLOW_HOSTS>...
+            List of hostnames to allow. By default the value of --host is allowed, and in addition
+            if that's a well known local address, other variations on well known local addresses are
+            allowed. If --allow-hosts is provided only exactly those hosts are allowed.
+
+        --allow-origins <ALLOW_ORIGINS>...
+            List of request origins to allow. These must be formatted as scheme://host:port. By
+            default any request with an origin header is rejected. If --allow-origins is provided
+            then only exactly those origins are allowed.
+
+        --android-storage <ANDROID_STORAGE>
+            Selects storage location to be used for test data (deprecated). [possible values: auto,
+            app, internal, sdcard]
+
+    -b, --binary <BINARY>
+            Path to the Firefox binary
+
+        --connect-existing
+            Connect to an existing Firefox instance
+
+    -h, --help
+            Prints this message
+
+        --host <HOST>
+            Host IP to use for WebDriver server [default: 127.0.0.1]
+
+        --jsdebugger
+            Attach browser toolbox debugger for Firefox
+
+        --log <LEVEL>
+            Set Gecko log level [possible values: fatal, error, warn, info, config, debug, trace]
+
+        --marionette-host <HOST>
+            Host to use to connect to Gecko [default: 127.0.0.1]
+
+        --marionette-port <PORT>
+            Port to use to connect to Gecko [default: system-allocated port]
+
+    -p, --port <PORT>
+            Port to use for WebDriver server [default: 4444]
+
+        --profile-root <PROFILE_ROOT>
+            Directory in which to create profiles. Defaults to the system temporary directory.
+
+    -v
+            Log level verbosity (-v for debug and -vv for trace level)
+
+    -V, --version
+            Prints version and copying information
+
+        --websocket-port <PORT>
+            Port to use to connect to WebDriver BiDi [default: 9222]
+
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilet6dAqE/datareporting/state.json.tmp for writing
+console.error: "Could not write session state file " (new OperationError("Failed to backup the source file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJafT54/sessionstore-backups/recovery.jsonlz4) to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJafT54/sessionstore-backups/recovery.baklz4", (void 0))) ""
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilepZn8yS/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilepZn8yS/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileucqi4a/crashes/store.json.mozlz4.tmp for writing
+console.error: "Could not write session state file " (new NotReadableError("Could not write chunk (size = 1610) to file /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/sessionstore-backups/recovery.jsonlz4.tmp. The file may be corrupt.", (void 0))) ""
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileucqi4a/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile2npjSk/crashes/store.json.mozlz4.tmp for writing
+2022-12-14 16:15:26.156 firefox-bin[95166:1795732] Persistent UI failed to open file file:///Users/josephbeegan/Library/Saved%20Application%20State/org.mozilla.firefox.savedState/window_1.data: No space left on device (28)
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile2npjSk/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIaQfIe/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIaQfIe/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJafT54/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJafT54/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+console.error: services.settings: 
+  Message: StorageError: Storage error: QuotaExceededError: IndexedDB: security-state/intermediates importChanges() IndexedDB:  importChanges() in security-state/intermediates The current transaction exceeded its quota limitations.
+  Stack:
+    StorageError@resource://services-settings/RemoteSettingsClient.jsm:162:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.jsm:886:14
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:774:38
+
+console.log: "RemoteSettingsWorker error: QuotaExceededError: IndexedDB:  execute() The current transaction exceeded its quota limitations."
+console.error: services.settings: 
+  Message: StorageError: Storage error: InvalidStateError: IndexedDB: security-state/onecrl importChanges() IndexedDB: collections, timestamps, records importChanges() in security-state/onecrl A mutation operation was attempted on a database that did not allow mutations.
+  Stack:
+    StorageError@resource://services-settings/RemoteSettingsClient.jsm:162:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.jsm:886:14
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:774:38
+
+console.log: "RemoteSettingsWorker error: QuotaExceededError: IndexedDB:  execute() The current transaction exceeded its quota limitations."
+console.error: services.settings: 
+  Message: StorageError: Storage error: QuotaExceededError: IndexedDB: security-state/intermediates importChanges() IndexedDB:  importChanges() in security-state/intermediates The current transaction exceeded its quota limitations.
+  Stack:
+    StorageError@resource://services-settings/RemoteSettingsClient.jsm:162:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.jsm:886:14
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:774:38
+
+console.error: services.settings: 
+  Message: StorageError: Storage error: InvalidStateError: IndexedDB: security-state/onecrl importChanges() IndexedDB: collections, timestamps, records importChanges() in security-state/onecrl A mutation operation was attempted on a database that did not allow mutations.
+  Stack:
+    StorageError@resource://services-settings/RemoteSettingsClient.jsm:162:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.jsm:886:14
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:774:38
+
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile2npjSk/bookmarkbackups/bookmarks-2022-12-14.jsonlz4.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileIaQfIe/bookmarkbackups/bookmarks-2022-12-14.jsonlz4.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJafT54/bookmarkbackups/bookmarks-2022-12-14.jsonlz4.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiles2AugO/bookmarkbackups/bookmarks-2022-12-14.jsonlz4.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+1671035115590	Marionette	INFO	Stopped listening on port 53716
+1671035121982	Marionette	INFO	Stopped listening on port 53659
+1671035123981	Marionette	INFO	Stopped listening on port 53770
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1671036718002	geckodriver	INFO	Listening on 127.0.0.1:55290
+1671036718425	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55291" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileeEMKSV"
+1671036719523	Marionette	INFO	Marionette enabled
+1671036719571	Marionette	INFO	Listening on port 55298
+Read port: 55298
+WebDriver BiDi listening on ws://127.0.0.1:55291
+1671036720234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileeEMKSV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55291/devtools/browser/e833f78f-fd98-41ef-8dfd-0dae411faedf
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036725868	geckodriver	INFO	Listening on 127.0.0.1:55342
+1671036726375	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55343" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileBQMLcI"
+1671036727175	Marionette	INFO	Marionette enabled
+1671036727377	Marionette	INFO	Listening on port 55348
+Read port: 55348
+WebDriver BiDi listening on ws://127.0.0.1:55343
+1671036728400	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileBQMLcI/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55343/devtools/browser/7762d0cf-8c66-4ff5-bf74-8a89d2031bde
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036733435	geckodriver	INFO	Listening on 127.0.0.1:55394
+1671036733929	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55395" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileHjGMJJ"
+1671036734937	Marionette	INFO	Marionette enabled
+1671036735143	Marionette	INFO	Listening on port 55402
+Read port: 55402
+WebDriver BiDi listening on ws://127.0.0.1:55395
+1671036735563	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileHjGMJJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55395/devtools/browser/94029b21-635c-4a85-a722-9bea0f0530c7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036740860	geckodriver	INFO	Listening on 127.0.0.1:55446
+1671036741367	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55447" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiledHyzJU"
+1671036742217	Marionette	INFO	Marionette enabled
+1671036742256	Marionette	INFO	Listening on port 55457
+Read port: 55457
+WebDriver BiDi listening on ws://127.0.0.1:55447
+1671036742995	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofiledHyzJU/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55447/devtools/browser/778be3fa-5c8e-4da7-abb0-a38f756a8d56
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036748579	geckodriver	INFO	Listening on 127.0.0.1:55502
+1671036749084	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55503" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileQjdadq"
+1671036749809	Marionette	INFO	Marionette enabled
+1671036749969	Marionette	INFO	Listening on port 55511
+Read port: 55511
+WebDriver BiDi listening on ws://127.0.0.1:55503
+1671036750888	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileQjdadq/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55503/devtools/browser/e6dbac5c-64b6-4e59-8b36-d9de47a067ae
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036756249	geckodriver	INFO	Listening on 127.0.0.1:55556
+1671036756706	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55557" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilewiQSXh"
+1671036757458	Marionette	INFO	Marionette enabled
+1671036757561	Marionette	INFO	Listening on port 55566
+Read port: 55566
+WebDriver BiDi listening on ws://127.0.0.1:55557
+1671036758572	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilewiQSXh/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55557/devtools/browser/5c84b83e-4776-42f1-931e-c4fa77d61c5c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036763874	geckodriver	INFO	Listening on 127.0.0.1:55610
+1671036764384	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55611" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileeLGuc5"
+1671036765000	Marionette	INFO	Marionette enabled
+1671036765054	Marionette	INFO	Listening on port 55618
+Read port: 55618
+WebDriver BiDi listening on ws://127.0.0.1:55611
+1671036765991	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileeLGuc5/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55611/devtools/browser/ba5c21a8-e20a-4455-841e-74c0cf657f61
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036772152	geckodriver	INFO	Listening on 127.0.0.1:55661
+1671036772660	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55662" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilekAvG1i"
+1671036773786	Marionette	INFO	Marionette enabled
+1671036773813	Marionette	INFO	Listening on port 55671
+Read port: 55671
+WebDriver BiDi listening on ws://127.0.0.1:55662
+1671036774508	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilekAvG1i/search.json.mozlz4", (void 0)))
+JavaScript error: resource:///modules/BrowserGlue.jsm, line 5378: TypeError: win is null
+DevTools listening on ws://127.0.0.1:55662/devtools/browser/7be57e37-307b-4834-b589-5518ecdc3c58
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036791202	geckodriver	INFO	Listening on 127.0.0.1:55721
+1671036791690	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55722" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileXo2JGT"
+1671036792789	Marionette	INFO	Marionette enabled
+1671036792860	Marionette	INFO	Listening on port 55728
+Read port: 55728
+WebDriver BiDi listening on ws://127.0.0.1:55722
+1671036793555	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileXo2JGT/search.json.mozlz4", (void 0)))
+JavaScript error: resource:///modules/BrowserGlue.jsm, line 5378: TypeError: win is null
+JavaScript error: chrome://global/content/elements/browser-custom-element.js, line 628: TypeError: this.browsingContext is null
+DevTools listening on ws://127.0.0.1:55722/devtools/browser/b5e5ac09-f6db-47a3-a53d-4a57556cfa45
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036850698	geckodriver	INFO	Listening on 127.0.0.1:55784
+1671036851189	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55785" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilew22b7p"
+1671036851961	Marionette	INFO	Marionette enabled
+1671036852014	Marionette	INFO	Listening on port 55794
+Read port: 55794
+WebDriver BiDi listening on ws://127.0.0.1:55785
+1671036852974	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilew22b7p/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55785/devtools/browser/45c02ff4-832e-40b6-b122-6b382c76fa72
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036857851	geckodriver	INFO	Listening on 127.0.0.1:55835
+1671036858356	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55836" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYtes3v"
+1671036859333	Marionette	INFO	Marionette enabled
+1671036859417	Marionette	INFO	Listening on port 55846
+Read port: 55846
+WebDriver BiDi listening on ws://127.0.0.1:55836
+1671036860218	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYtes3v/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55836/devtools/browser/9b6da8a6-460b-4611-8b01-a068038cafa9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036866468	geckodriver	INFO	Listening on 127.0.0.1:55890
+1671036866956	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55891" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileQOlZqY"
+1671036867726	Marionette	INFO	Marionette enabled
+1671036867762	Marionette	INFO	Listening on port 55901
+Read port: 55901
+WebDriver BiDi listening on ws://127.0.0.1:55891
+1671036868592	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileQOlZqY/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55891/devtools/browser/10389656-0b34-4a6e-91b4-749a340cd16c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036874634	geckodriver	INFO	Listening on 127.0.0.1:55947
+1671036875120	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55948" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilehbuP9d"
+1671036876140	Marionette	INFO	Marionette enabled
+1671036876200	Marionette	INFO	Listening on port 55955
+Read port: 55955
+WebDriver BiDi listening on ws://127.0.0.1:55948
+1671036877241	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilehbuP9d/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55948/devtools/browser/d9bc0874-82f2-4b7d-b69b-453a2137d499
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036883233	geckodriver	INFO	Listening on 127.0.0.1:55998
+1671036883738	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55999" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileVyjWg4"
+1671036884722	Marionette	INFO	Marionette enabled
+1671036884776	Marionette	INFO	Listening on port 56010
+Read port: 56010
+WebDriver BiDi listening on ws://127.0.0.1:55999
+1671036885835	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileVyjWg4/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55999/devtools/browser/02fed8d1-05ae-42e5-a3f6-06506752a670
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036890835	geckodriver	INFO	Listening on 127.0.0.1:56054
+1671036891323	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56055" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilezpbyXx"
+1671036892295	Marionette	INFO	Marionette enabled
+1671036892327	Marionette	INFO	Listening on port 56064
+Read port: 56064
+WebDriver BiDi listening on ws://127.0.0.1:56055
+1671036892772	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilezpbyXx/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56055/devtools/browser/8732760a-fec7-4a27-8d34-0188385aef6b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036898575	geckodriver	INFO	Listening on 127.0.0.1:56107
+1671036899081	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56108" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilevHaRlm"
+1671036899844	Marionette	INFO	Marionette enabled
+1671036899895	Marionette	INFO	Listening on port 56118
+Read port: 56118
+WebDriver BiDi listening on ws://127.0.0.1:56108
+1671036900821	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilevHaRlm/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56108/devtools/browser/bf30434a-aa17-41e5-880e-bc37e3a3fda1
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036907586	geckodriver	INFO	Listening on 127.0.0.1:56159
+1671036909292	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56160" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileO2Ack8"
+1671036910740	Marionette	INFO	Marionette enabled
+1671036910792	Marionette	INFO	Listening on port 56172
+Read port: 56172
+WebDriver BiDi listening on ws://127.0.0.1:56160
+1671036911860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileO2Ack8/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56160/devtools/browser/84b3fec8-f711-4fcd-b70f-aa31fd57d248
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036917245	geckodriver	INFO	Listening on 127.0.0.1:56216
+1671036917750	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56217" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilepIMF22"
+1671036918823	Marionette	INFO	Marionette enabled
+1671036918932	Marionette	INFO	Listening on port 56228
+Read port: 56228
+WebDriver BiDi listening on ws://127.0.0.1:56217
+1671036919973	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilepIMF22/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56217/devtools/browser/b7402904-4883-47a7-8a3f-fab11c3e28a8
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036925617	geckodriver	INFO	Listening on 127.0.0.1:56272
+1671036926108	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56273" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileDBOP0c"
+1671036927130	Marionette	INFO	Marionette enabled
+1671036927189	Marionette	INFO	Listening on port 56285
+Read port: 56285
+WebDriver BiDi listening on ws://127.0.0.1:56273
+1671036927893	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileDBOP0c/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56273/devtools/browser/64d56fd7-6fa5-485b-a945-3522f307010e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036934464	geckodriver	INFO	Listening on 127.0.0.1:56331
+1671036934946	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56332" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile716wmV"
+1671036936292	Marionette	INFO	Marionette enabled
+1671036936385	Marionette	INFO	Listening on port 56340
+Read port: 56340
+WebDriver BiDi listening on ws://127.0.0.1:56332
+Read port: 56340
+1671036937908	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile716wmV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56332/devtools/browser/4fcc6e28-6330-4ce8-9258-8d57645856b4
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036943372	geckodriver	INFO	Listening on 127.0.0.1:56391
+1671036943877	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56392" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileDxHNtv"
+1671036944915	Marionette	INFO	Marionette enabled
+1671036944994	Marionette	INFO	Listening on port 56400
+Read port: 56400
+WebDriver BiDi listening on ws://127.0.0.1:56392
+1671036946321	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileDxHNtv/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56392/devtools/browser/3d4547ff-1bd0-4698-b695-bbf8aa2295b7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036950986	geckodriver	INFO	Listening on 127.0.0.1:56448
+1671036951487	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56449" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile0L1VGB"
+1671036952165	Marionette	INFO	Marionette enabled
+1671036952224	Marionette	INFO	Listening on port 56457
+Read port: 56457
+WebDriver BiDi listening on ws://127.0.0.1:56449
+1671036952844	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile0L1VGB/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56449/devtools/browser/0c08e627-b5ca-48bf-835f-c4d643db93f3
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036958216	geckodriver	INFO	Listening on 127.0.0.1:56499
+1671036958695	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56500" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilebEWuCD"
+1671036959692	Marionette	INFO	Marionette enabled
+1671036959756	Marionette	INFO	Listening on port 56511
+Read port: 56511
+WebDriver BiDi listening on ws://127.0.0.1:56500
+Read port: 56511
+1671036961213	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilebEWuCD/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56500/devtools/browser/6673607f-dc9f-4737-8727-339b578b46a3
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036967300	geckodriver	INFO	Listening on 127.0.0.1:56563
+1671036967681	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56564" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9LmWuj"
+1671036968726	Marionette	INFO	Marionette enabled
+1671036968764	Marionette	INFO	Listening on port 56570
+Read port: 56570
+WebDriver BiDi listening on ws://127.0.0.1:56564
+1671036969464	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9LmWuj/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56564/devtools/browser/b4728f74-a1a1-411d-ae0a-4cdfd9288251
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036974942	geckodriver	INFO	Listening on 127.0.0.1:56615
+1671036975431	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56616" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilei8kiRk"
+1671036976183	Marionette	INFO	Marionette enabled
+1671036976361	Marionette	INFO	Listening on port 56628
+Read port: 56628
+WebDriver BiDi listening on ws://127.0.0.1:56616
+1671036977649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilei8kiRk/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56616/devtools/browser/efb2ddd7-0d3b-4513-9430-0b0297d1927e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036983866	geckodriver	INFO	Listening on 127.0.0.1:56675
+1671036984367	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56676" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilewnHJO4"
+1671036985543	Marionette	INFO	Marionette enabled
+1671036985580	Marionette	INFO	Listening on port 56683
+Read port: 56683
+WebDriver BiDi listening on ws://127.0.0.1:56676
+1671036986303	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilewnHJO4/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56676/devtools/browser/22769e7b-77f3-4370-a65e-d0590fa7143d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671036992542	geckodriver	INFO	Listening on 127.0.0.1:56726
+1671036993019	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56727" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileaY6hy9"
+1671036993891	Marionette	INFO	Marionette enabled
+1671036993976	Marionette	INFO	Listening on port 56738
+Read port: 56738
+Read port: 56738
+WebDriver BiDi listening on ws://127.0.0.1:56727
+1671036995704	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileaY6hy9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56727/devtools/browser/b30b4051-de09-4fb1-8d48-8aeeb0ca246e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671037002196	geckodriver	INFO	Listening on 127.0.0.1:56789
+1671037002695	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56790" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9"
+1671037003786	Marionette	INFO	Marionette enabled
+1671037003843	Marionette	INFO	Listening on port 56796
+Read port: 56796
+Read port: 56796
+WebDriver BiDi listening on ws://127.0.0.1:56790
+1671037005453	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56790/devtools/browser/066fd531-ecca-48c4-a273-ba223ec01dd0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671037012870	geckodriver	INFO	Listening on 127.0.0.1:56846
+1671037013384	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56847" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX"
+1671037014997	Marionette	INFO	Marionette enabled
+1671037015182	Marionette	INFO	Listening on port 56860
+Read port: 56860
+WebDriver BiDi listening on ws://127.0.0.1:56847
+Read port: 56860
+JavaScript error: , line 0: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code.
+1671037017035	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[2022-12-14T16:56:57Z ERROR cert_storage] error getting security_state path: No space left on device (os error 28)
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.sys.mjs", 415))
+2022-12-14 16:56:59.100 firefox-bin[98365:1855990] Persistent UI failed to open file file:///Users/josephbeegan/Library/Saved%20Application%20State/org.mozilla.firefox.savedState/window_1.data: No space left on device (28)
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/search.json.mozlz4", (void 0)))
+JavaScript error: , line 0: NotReadableError: Could not write chunk (size = 90) to file /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/sessionCheckpoints.json.tmp. The file may be corrupt.
+JavaScript error: , line 0: OperationError: Could not move temporary file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilebEWuCD/datareporting/state.json.tmp) to destination(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilebEWuCD/datareporting/state.json)
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  UnknownError
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 964: Error: Error(s) encountered during statement execution: unable to open database file
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 964: Error: Error(s) encountered during statement execution: unable to open database file
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not create directory at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/thumbnails
+[2022-12-14T16:57:00Z ERROR glean_core] Failed to initialize Glean: An I/O error occurred: No space left on device (os error 28)
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilewnHJO4/xulstore.json.tmp for writing
+JavaScript error: , line 0: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code.
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+DevTools listening on ws://127.0.0.1:56847/devtools/browser/f2ecdda5-3f64-4adf-9d30-5fe1c7d9f897
+1671037021434	CDP	WARN	Failed to create /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/DevToolsActivePort (Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/DevToolsActivePort for writing)
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 964: Error: Error(s) encountered during statement execution: unable to open database file
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilei8kiRk/xulstore.json.tmp for writing
+console.error: SearchSettings: "_write: Could not write to settings file:" (new NotReadableError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/search.json.mozlz4.tmp for writing", (void 0)))
+console.error: "Could not write session state file " (new NotReadableError("Could not create directory at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/sessionstore-backups", (void 0))) ""
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+JavaScript error: , line 0: NotReadableError: Could not create unique path
+geckodriver: error: Unable to write to temporary directory; consider --profile-root with a writeable directory
+geckodriver 0.32.0 
+WebDriver implementation for Firefox
+
+USAGE:
+    geckodriver [OPTIONS]
+
+OPTIONS:
+        --allow-hosts <ALLOW_HOSTS>...
+            List of hostnames to allow. By default the value of --host is allowed, and in addition
+            if that's a well known local address, other variations on well known local addresses are
+            allowed. If --allow-hosts is provided only exactly those hosts are allowed.
+
+        --allow-origins <ALLOW_ORIGINS>...
+            List of request origins to allow. These must be formatted as scheme://host:port. By
+            default any request with an origin header is rejected. If --allow-origins is provided
+            then only exactly those origins are allowed.
+
+        --android-storage <ANDROID_STORAGE>
+            Selects storage location to be used for test data (deprecated). [possible values: auto,
+            app, internal, sdcard]
+
+    -b, --binary <BINARY>
+            Path to the Firefox binary
+
+        --connect-existing
+            Connect to an existing Firefox instance
+
+    -h, --help
+            Prints this message
+
+        --host <HOST>
+            Host IP to use for WebDriver server [default: 127.0.0.1]
+
+        --jsdebugger
+            Attach browser toolbox debugger for Firefox
+
+        --log <LEVEL>
+            Set Gecko log level [possible values: fatal, error, warn, info, config, debug, trace]
+
+        --marionette-host <HOST>
+            Host to use to connect to Gecko [default: 127.0.0.1]
+
+        --marionette-port <PORT>
+            Port to use to connect to Gecko [default: system-allocated port]
+
+    -p, --port <PORT>
+            Port to use for WebDriver server [default: 4444]
+
+        --profile-root <PROFILE_ROOT>
+            Directory in which to create profiles. Defaults to the system temporary directory.
+
+    -v
+            Log level verbosity (-v for debug and -vv for trace level)
+
+    -V, --version
+            Prints version and copying information
+
+        --websocket-port <PORT>
+            Port to use to connect to WebDriver BiDi [default: 9222]
+
+JavaScript error: resource://gre/modules/NewTabUtils.sys.mjs, line 1401: TypeError: conn is undefined
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9LmWuj/crashes/store.json.mozlz4.tmp for writing
+console.error: "Could not write session state file " (new OperationError("Failed to backup the source file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9/sessionstore-backups/recovery.jsonlz4) to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9/sessionstore-backups/recovery.baklz4", (void 0))) ""
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9LmWuj/datareporting/state.json.tmp for writing
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 964: Error: Error(s) encountered during statement execution: unable to open database file
+JavaScript error: resource://gre/modules/NewTabUtils.sys.mjs, line 1401: TypeError: conn is undefined
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1185: NS_ERROR_FILE_ACCESS_DENIED: Could not open connection to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/protections.sqlite: 2152857621
+JavaScript error: , line 0: OperationError: Could not move temporary file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilei8kiRk/crashes/store.json.mozlz4.tmp) to destination(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilei8kiRk/crashes/store.json.mozlz4)
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilei8kiRk/datareporting/state.json.tmp for writing
+console.error: "Could not write session state file " (new OperationError("Failed to backup the source file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileaY6hy9/sessionstore-backups/recovery.jsonlz4) to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileaY6hy9/sessionstore-backups/recovery.baklz4", (void 0))) ""
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9LmWuj/xulstore.json.tmp for writing
+console.error: "Could not write session state file " (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/sessionstore-backups/recovery.jsonlz4.tmp for writing", (void 0))) ""
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9/xulstore.json.tmp for writing
+console.error: "Could not write session state file " (new OperationError("Failed to backup the source file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9/sessionstore-backups/recovery.jsonlz4) to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9/sessionstore-backups/recovery.baklz4", (void 0))) ""
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilewnHJO4/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/thumbnails) because it does not exist
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilewnHJO4/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileaY6hy9/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileaY6hy9/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/xulstore.json.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileAQJoz9/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileaY6hy9/xulstore.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYtes3v/xulstore.json.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not create directory at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilerw7HLX/datareporting
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1671104993579	geckodriver	INFO	Listening on 127.0.0.1:60061
+1671104994088	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60062" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJTWWgG"
+1671104995752	Marionette	INFO	Marionette enabled
+1671104995822	Marionette	INFO	Listening on port 60069
+Read port: 60069
+WebDriver BiDi listening on ws://127.0.0.1:60062
+1671104996365	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJTWWgG/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60062/devtools/browser/940ad873-2c1b-4570-b451-54a96adb4c12
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671105001627	geckodriver	INFO	Listening on 127.0.0.1:60113
+1671105002128	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60114" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilecNAne2"
+1671105003196	Marionette	INFO	Marionette enabled
+1671105003286	Marionette	INFO	Listening on port 60123
+Read port: 60123
+WebDriver BiDi listening on ws://127.0.0.1:60114
+1671105004090	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilecNAne2/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60114/devtools/browser/20b2a6a4-3d45-4882-a6b7-b6ea3f29d2c8
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671105008890	geckodriver	INFO	Listening on 127.0.0.1:60166
+1671105009374	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60167" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9fzjKM"
+1671105010503	Marionette	INFO	Marionette enabled
+1671105010861	Marionette	INFO	Listening on port 60176
+Read port: 60176
+WebDriver BiDi listening on ws://127.0.0.1:60167
+1671105011073	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9fzjKM/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60167/devtools/browser/0d5a3e19-833f-4042-bf06-b0402f6fec23
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671105015796	geckodriver	INFO	Listening on 127.0.0.1:60223
+1671105016296	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60224" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilez5yTGC"
+1671105017206	Marionette	INFO	Marionette enabled
+1671105017242	Marionette	INFO	Listening on port 60231
+Read port: 60231
+WebDriver BiDi listening on ws://127.0.0.1:60224
+1671105017626	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilez5yTGC/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60224/devtools/browser/e4f223bf-0cef-4e64-93b2-664cc2860dc4
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671105022189	geckodriver	INFO	Listening on 127.0.0.1:60272
+1671105022687	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60273" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile38vVeR"
+1671105023460	Marionette	INFO	Marionette enabled
+1671105023506	Marionette	INFO	Listening on port 60283
+Read port: 60283
+WebDriver BiDi listening on ws://127.0.0.1:60273
+1671105024158	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile38vVeR/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60273/devtools/browser/a6071702-795d-4324-adf6-6545a5731502
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+1671105029743	geckodriver	INFO	Listening on 127.0.0.1:60326
+1671105030210	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60327" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo"
+1671105031060	Marionette	INFO	Marionette enabled
+1671105031096	Marionette	INFO	Listening on port 60335
+Read port: 60335
+WebDriver BiDi listening on ws://127.0.0.1:60327
+1671105031880	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  UnknownError
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+DevTools listening on ws://127.0.0.1:60327/devtools/browser/79715866-fef9-4ae1-a8b3-c2b9c1a4abab
+console.error: SearchSettings: "_write: Could not write to settings file:" (new OperationError("Could not move temporary file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo/search.json.mozlz4.tmp) to destination(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo/search.json.mozlz4)", (void 0)))
+console.error: "Could not write session state file " (new OperationError("Failed to backup the source file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilez5yTGC/sessionstore-backups/recovery.jsonlz4) to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilez5yTGC/sessionstore-backups/recovery.baklz4", (void 0))) ""
+console.error: "Could not write session state file " (new OperationError("Could not move temporary file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo/sessionstore-backups/recovery.jsonlz4.tmp) to destination(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo/sessionstore-backups/recovery.jsonlz4)", (void 0))) ""
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+JavaScript error: , line 0: NotReadableError: Could not create unique path
+geckodriver: error: Unable to write to temporary directory; consider --profile-root with a writeable directory
+geckodriver 0.32.0 
+WebDriver implementation for Firefox
+
+USAGE:
+    geckodriver [OPTIONS]
+
+OPTIONS:
+        --allow-hosts <ALLOW_HOSTS>...
+            List of hostnames to allow. By default the value of --host is allowed, and in addition
+            if that's a well known local address, other variations on well known local addresses are
+            allowed. If --allow-hosts is provided only exactly those hosts are allowed.
+
+        --allow-origins <ALLOW_ORIGINS>...
+            List of request origins to allow. These must be formatted as scheme://host:port. By
+            default any request with an origin header is rejected. If --allow-origins is provided
+            then only exactly those origins are allowed.
+
+        --android-storage <ANDROID_STORAGE>
+            Selects storage location to be used for test data (deprecated). [possible values: auto,
+            app, internal, sdcard]
+
+    -b, --binary <BINARY>
+            Path to the Firefox binary
+
+        --connect-existing
+            Connect to an existing Firefox instance
+
+    -h, --help
+            Prints this message
+
+        --host <HOST>
+            Host IP to use for WebDriver server [default: 127.0.0.1]
+
+        --jsdebugger
+            Attach browser toolbox debugger for Firefox
+
+        --log <LEVEL>
+            Set Gecko log level [possible values: fatal, error, warn, info, config, debug, trace]
+
+        --marionette-host <HOST>
+            Host to use to connect to Gecko [default: 127.0.0.1]
+
+        --marionette-port <PORT>
+            Port to use to connect to Gecko [default: system-allocated port]
+
+    -p, --port <PORT>
+            Port to use for WebDriver server [default: 4444]
+
+        --profile-root <PROFILE_ROOT>
+            Directory in which to create profiles. Defaults to the system temporary directory.
+
+    -v
+            Log level verbosity (-v for debug and -vv for trace level)
+
+    -V, --version
+            Prints version and copying information
+
+        --websocket-port <PORT>
+            Port to use to connect to WebDriver BiDi [default: 9222]
+
+JavaScript error: resource://gre/modules/NewTabUtils.sys.mjs, line 1401: TypeError: conn is undefined
+console.error: "Could not write session state file " (new OperationError("Failed to backup the source file(/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile38vVeR/sessionstore-backups/recovery.jsonlz4) to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile38vVeR/sessionstore-backups/recovery.baklz4", (void 0))) ""
+console.error: "Could not write session state file " (new NotReadableError("Could not write chunk (size = 1608) to file /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo/sessionstore-backups/recovery.jsonlz4.tmp. The file may be corrupt.", (void 0))) ""
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJTWWgG/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJTWWgG/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilecNAne2/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilecNAne2/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilecNAne2/xulstore.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9fzjKM/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile9fzjKM/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilez5yTGC/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofilez5yTGC/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile38vVeR/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofile38vVeR/datareporting/state.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo/crashes/store.json.mozlz4.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileYC4QSo/datareporting/state.json.tmp for writing
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1185: NS_ERROR_FILE_ACCESS_DENIED: Could not open connection to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileJTWWgG/protections.sqlite: 2152857621
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1671105174897	geckodriver	INFO	Listening on 127.0.0.1:60432
+1671105175355	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60433" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M"
+1671105176384	Marionette	INFO	Marionette enabled
+1671105176443	Marionette	INFO	Listening on port 60440
+Read port: 60440
+WebDriver BiDi listening on ws://127.0.0.1:60433
+1671105177221	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.log: "RemoteSettingsWorker error: QuotaExceededError: IndexedDB:  execute() The current transaction exceeded its quota limitations."
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/search.json.mozlz4", (void 0)))
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionCheckpoints.json.tmp for writing
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1185: NS_ERROR_FILE_ACCESS_DENIED: Could not open connection to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/content-prefs.sqlite: 2152857621
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1185: NS_ERROR_FILE_ACCESS_DENIED: Could not open connection to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/content-prefs.sqlite: 2152857621
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not create directory at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/thumbnails
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  UnknownError
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+console.error: SearchSettings: "_write: Could not write to settings file:" (new NotReadableError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/search.json.mozlz4.tmp for writing", (void 0)))
+DevTools listening on ws://127.0.0.1:60433/devtools/browser/da656c0a-88dd-45dd-a345-9ee05261b544
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+1671105179419	CDP	WARN	Failed to create /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/DevToolsActivePort (Could not write chunk (size = 60) to file /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/DevToolsActivePort. The file may be corrupt.)
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: resource://gre/modules/PlacesUtils.sys.mjs, line 2071: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.tagsFolder]
+JavaScript error: , line 0: uncaught exception: Object
+2022-12-15 11:52:59.656 firefox-bin[13162:2017541] Persistent UI failed to open file file:///Users/josephbeegan/Library/Saved%20Application%20State/org.mozilla.firefox.savedState/window_1.data: No space left on device (28)
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1185: NS_ERROR_FILE_ACCESS_DENIED: Could not open connection to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/content-prefs.sqlite: 2152857621
+console.error: SearchSettings: "_write: Could not write to settings file:" (new NotReadableError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/search.json.mozlz4.tmp for writing", (void 0)))
+console.error: "Could not write session state file " (new NotReadableError("Could not create directory at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionstore-backups", (void 0))) ""
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://plantpan.itps.ncku.edu.tw."
+JavaScript error: , line 0: NotReadableError: Could not create unique path
+geckodriver: error: Unable to write to temporary directory; consider --profile-root with a writeable directory
+geckodriver 0.32.0 
+WebDriver implementation for Firefox
+
+USAGE:
+    geckodriver [OPTIONS]
+
+OPTIONS:
+        --allow-hosts <ALLOW_HOSTS>...
+            List of hostnames to allow. By default the value of --host is allowed, and in addition
+            if that's a well known local address, other variations on well known local addresses are
+            allowed. If --allow-hosts is provided only exactly those hosts are allowed.
+
+        --allow-origins <ALLOW_ORIGINS>...
+            List of request origins to allow. These must be formatted as scheme://host:port. By
+            default any request with an origin header is rejected. If --allow-origins is provided
+            then only exactly those origins are allowed.
+
+        --android-storage <ANDROID_STORAGE>
+            Selects storage location to be used for test data (deprecated). [possible values: auto,
+            app, internal, sdcard]
+
+    -b, --binary <BINARY>
+            Path to the Firefox binary
+
+        --connect-existing
+            Connect to an existing Firefox instance
+
+    -h, --help
+            Prints this message
+
+        --host <HOST>
+            Host IP to use for WebDriver server [default: 127.0.0.1]
+
+        --jsdebugger
+            Attach browser toolbox debugger for Firefox
+
+        --log <LEVEL>
+            Set Gecko log level [possible values: fatal, error, warn, info, config, debug, trace]
+
+        --marionette-host <HOST>
+            Host to use to connect to Gecko [default: 127.0.0.1]
+
+        --marionette-port <PORT>
+            Port to use to connect to Gecko [default: system-allocated port]
+
+    -p, --port <PORT>
+            Port to use for WebDriver server [default: 4444]
+
+        --profile-root <PROFILE_ROOT>
+            Directory in which to create profiles. Defaults to the system temporary directory.
+
+    -v
+            Log level verbosity (-v for debug and -vv for trace level)
+
+    -V, --version
+            Prints version and copying information
+
+        --websocket-port <PORT>
+            Port to use to connect to WebDriver BiDi [default: 9222]
+
+JavaScript error: resource://gre/modules/NewTabUtils.sys.mjs, line 1401: TypeError: conn is undefined
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1185: NS_ERROR_FILE_ACCESS_DENIED: Could not open connection to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/content-prefs.sqlite: 2152857621
+JavaScript error: resource://gre/modules/NewTabUtils.sys.mjs, line 1401: TypeError: conn is undefined
+1671105191008	Marionette	INFO	Stopped listening on port 60440
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionCheckpoints.json.tmp for writing
+console.error: "Could not write session state file " (new NotReadableError("Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionstore.jsonlz4.tmp for writing", (void 0))) ""
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionCheckpoints.json.tmp for writing
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: QuotaExceededError: The current transaction exceeded its quota limitations.
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionCheckpoints.json.tmp for writing
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1185: NS_ERROR_FILE_ACCESS_DENIED: Could not open connection to /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/protections.sqlite: 2152857621
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionCheckpoints.json.tmp for writing
+JavaScript error: , line 0: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionCheckpoints.json.tmp for writing
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/xulstore.json.tmp for writing
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  CrashMonitor: Writing notifications to file after receiving profile-before-change and awaiting all checkpoints written
+          Phase: IOUtils: waiting for profileBeforeChange IO to complete
+          State: {"profile-after-change":true,"final-ui-startup":true,"sessionstore-windows-restored":true,"quit-application-granted":true,"quit-application":true,"sessionstore-final-state-write-complete":true,"profile-change-net-teardown":true,"profile-change-teardown":true,"profile-before-change":true}
+WARNING: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionCheckpoints.json.tmp for writing
+WARNING: observe@resource://gre/modules/AsyncShutdown.jsm:574:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotReadableError: Could not open the file at /var/folders/f5/wkfcdc8n2rb_ddvf7ygf5vkr0000gn/T/rust_mozprofileyJHH2M/sessionCheckpoints.json.tmp for writing
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: uncaught exception: Object
+geckodriver: error: Unable to write to temporary directory; consider --profile-root with a writeable directory
+geckodriver 0.32.0 
+WebDriver implementation for Firefox
+
+USAGE:
+    geckodriver [OPTIONS]
+
+OPTIONS:
+        --allow-hosts <ALLOW_HOSTS>...
+            List of hostnames to allow. By default the value of --host is allowed, and in addition
+            if that's a well known local address, other variations on well known local addresses are
+            allowed. If --allow-hosts is provided only exactly those hosts are allowed.
+
+        --allow-origins <ALLOW_ORIGINS>...
+            List of request origins to allow. These must be formatted as scheme://host:port. By
+            default any request with an origin header is rejected. If --allow-origins is provided
+            then only exactly those origins are allowed.
+
+        --android-storage <ANDROID_STORAGE>
+            Selects storage location to be used for test data (deprecated). [possible values: auto,
+            app, internal, sdcard]
+
+    -b, --binary <BINARY>
+            Path to the Firefox binary
+
+        --connect-existing
+            Connect to an existing Firefox instance
+
+    -h, --help
+            Prints this message
+
+        --host <HOST>
+            Host IP to use for WebDriver server [default: 127.0.0.1]
+
+        --jsdebugger
+            Attach browser toolbox debugger for Firefox
+
+        --log <LEVEL>
+            Set Gecko log level [possible values: fatal, error, warn, info, config, debug, trace]
+
+        --marionette-host <HOST>
+            Host to use to connect to Gecko [default: 127.0.0.1]
+
+        --marionette-port <PORT>
+            Port to use to connect to Gecko [default: system-allocated port]
+
+    -p, --port <PORT>
+            Port to use for WebDriver server [default: 4444]
+
+        --profile-root <PROFILE_ROOT>
+            Directory in which to create profiles. Defaults to the system temporary directory.
+
+    -v
+            Log level verbosity (-v for debug and -vv for trace level)
+
+    -V, --version
+            Prints version and copying information
+
+        --websocket-port <PORT>
+            Port to use to connect to WebDriver BiDi [default: 9222]
+
+geckodriver: error: Unable to write to temporary directory; consider --profile-root with a writeable directory
+geckodriver 0.32.0 
+WebDriver implementation for Firefox
+
+USAGE:
+    geckodriver [OPTIONS]
+
+OPTIONS:
+        --allow-hosts <ALLOW_HOSTS>...
+            List of hostnames to allow. By default the value of --host is allowed, and in addition
+            if that's a well known local address, other variations on well known local addresses are
+            allowed. If --allow-hosts is provided only exactly those hosts are allowed.
+
+        --allow-origins <ALLOW_ORIGINS>...
+            List of request origins to allow. These must be formatted as scheme://host:port. By
+            default any request with an origin header is rejected. If --allow-origins is provided
+            then only exactly those origins are allowed.
+
+        --android-storage <ANDROID_STORAGE>
+            Selects storage location to be used for test data (deprecated). [possible values: auto,
+            app, internal, sdcard]
+
+    -b, --binary <BINARY>
+            Path to the Firefox binary
+
+        --connect-existing
+            Connect to an existing Firefox instance
+
+    -h, --help
+            Prints this message
+
+        --host <HOST>
+            Host IP to use for WebDriver server [default: 127.0.0.1]
+
+        --jsdebugger
+            Attach browser toolbox debugger for Firefox
+
+        --log <LEVEL>
+            Set Gecko log level [possible values: fatal, error, warn, info, config, debug, trace]
+
+        --marionette-host <HOST>
+            Host to use to connect to Gecko [default: 127.0.0.1]
+
+        --marionette-port <PORT>
+            Port to use to connect to Gecko [default: system-allocated port]
+
+    -p, --port <PORT>
+            Port to use for WebDriver server [default: 4444]
+
+        --profile-root <PROFILE_ROOT>
+            Directory in which to create profiles. Defaults to the system temporary directory.
+
+    -v
+            Log level verbosity (-v for debug and -vv for trace level)
+
+    -V, --version
+            Prints version and copying information
+
+        --websocket-port <PORT>
+            Port to use to connect to WebDriver BiDi [default: 9222]
+
+geckodriver: error: Unable to write to temporary directory; consider --profile-root with a writeable directory
+geckodriver 0.32.0 
+WebDriver implementation for Firefox
+
+USAGE:
+    geckodriver [OPTIONS]
+
+OPTIONS:
+        --allow-hosts <ALLOW_HOSTS>...
+            List of hostnames to allow. By default the value of --host is allowed, and in addition
+            if that's a well known local address, other variations on well known local addresses are
+            allowed. If --allow-hosts is provided only exactly those hosts are allowed.
+
+        --allow-origins <ALLOW_ORIGINS>...
+            List of request origins to allow. These must be formatted as scheme://host:port. By
+            default any request with an origin header is rejected. If --allow-origins is provided
+            then only exactly those origins are allowed.
+
+        --android-storage <ANDROID_STORAGE>
+            Selects storage location to be used for test data (deprecated). [possible values: auto,
+            app, internal, sdcard]
+
+    -b, --binary <BINARY>
+            Path to the Firefox binary
+
+        --connect-existing
+            Connect to an existing Firefox instance
+
+    -h, --help
+            Prints this message
+
+        --host <HOST>
+            Host IP to use for WebDriver server [default: 127.0.0.1]
+
+        --jsdebugger
+            Attach browser toolbox debugger for Firefox
+
+        --log <LEVEL>
+            Set Gecko log level [possible values: fatal, error, warn, info, config, debug, trace]
+
+        --marionette-host <HOST>
+            Host to use to connect to Gecko [default: 127.0.0.1]
+
+        --marionette-port <PORT>
+            Port to use to connect to Gecko [default: system-allocated port]
+
+    -p, --port <PORT>
+            Port to use for WebDriver server [default: 4444]
+
+        --profile-root <PROFILE_ROOT>
+            Directory in which to create profiles. Defaults to the system temporary directory.
+
+    -v
+            Log level verbosity (-v for debug and -vv for trace level)
+
+    -V, --version
+            Prints version and copying information
+
+        --websocket-port <PORT>
+            Port to use to connect to WebDriver BiDi [default: 9222]
+

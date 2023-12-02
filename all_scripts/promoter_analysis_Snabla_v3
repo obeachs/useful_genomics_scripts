@@ -1,0 +1,87 @@
+import sys
+import Bio
+import re
+import itertools
+from Bio import SeqIO
+from Bio import SearchIO
+from Bio.Seq import Seq
+from Bio.Seq import UnknownSeq
+from Bio.Blast import NCBIXML
+import numpy as np
+import pandas as pd
+import itertools
+import argparse
+import subprocess
+import os
+from os import listdir
+
+cols = ['scaff','version','type','start','end','something','strand','full','ID']
+def fasta_condenser(fasta, tair=0):
+    '''Preferably use this on the fasta file that has less info/annotation
+    with it - usually the query fasta'''
+    namelist = []
+    seqlist = []
+    if tair==0:
+        with open (fasta,'r') as fa:
+            for seq in SeqIO.parse(fa,'fasta'):
+                namelist.append(seq.id)
+                seqlist.append(str(seq.seq))
+        df = pd.DataFrame(list(zip(namelist, seqlist)),columns =['ID', 'Seq'])
+    else:
+        with open (fasta,'r') as fa:
+            for seq in SeqIO.parse(fa,'fasta'):
+                namelist.append(seq.id[0:9])
+                seqlist.append(str(seq.seq))
+        df = pd.DataFrame(list(zip(namelist, seqlist)),columns =['TAIR_ID', 'TAIR_Seq'])
+    return df
+
+promoter_fasta = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/Phytozome/PhytozomeV13/Salba/v3.1/annotation/Salba_584_v3.0_promoters_only.fa'
+promoter_and_gene_fasta = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/Phytozome/PhytozomeV13/Salba/v3.1/annotation/Salba_584_v3.0_promoters_and_genes.fa'
+# fa=fasta_condenser('/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/Phytozome/PhytozomeV13/Salba/v3.1/annotation/Phytozome/PhytozomeV13/Salba/v3.1/assembly/Salba_584_v3.0.fa')
+# batch = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/Phytozome/PhytozomeV13/Salba/v3.1/annotation/Send_to_plant_pan.fa'
+# used_ids = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/Phytozome/PhytozomeV13/Salba/v3.1/annotation/used_ids.txt'
+# gff =pd.read_csv('/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/Phytozome/PhytozomeV13/Salba/v3.1/annotation/Salba_584_v3.1.gene.gff3',sep='\t',names=cols,skiprows=3)
+# gff = gff[gff['type'] == 'gene']
+
+# scaffolds = fa['Seq'].to_list()
+
+
+# '''Leaving this here in case I want to change promoter sequence length'''
+
+# with open(promoter_fasta,'w+') as prom_fa, open(promoter_and_gene_fasta,'w+') as prom_and_gene_fa:
+#     for index, row in gff.iterrows():
+#         if row['strand'] == '+':
+#             scaff_num = int(row['scaff'][-1])
+#             sequence = scaffolds[scaff_num]
+#             promoter_start = row['start'] - 1000
+#             promoter_end = row['start']
+#             seq_end = row['end']
+#             promoter = sequence[promoter_start:promoter_end]
+#             promoter_and_gene = sequence[promoter_start:seq_end]
+#             prom_fa.write('>' + row['ID'] + '\n' + promoter + '\n')
+#             prom_and_gene_fa.write('>' + row['ID'] + '\n' + promoter_and_gene + '\n')
+#         if row['strand'] == '-':
+#             scaff_num = int(row['scaff'][-1])
+#             sequence = scaffolds[scaff_num]
+#             promoter_start = row['end'] + 1000
+#             promoter_end = row['end']
+#             seq_end = row['start']
+#             promoter = Seq(sequence[promoter_end:promoter_start]).reverse_complement()
+#             promoter_and_gene =Seq(sequence[seq_end:promoter_start]).reverse_complement()
+#             prom_fa.write('>' + row['ID'] + '_reverse_complement' + '\n' + str(promoter) + '\n')
+#             prom_and_gene_fa.write('>' + row['ID'] + '_reverse_complement' + '\n' + str(promoter_and_gene) + '\n')
+
+# used_list = []
+# with open(used_ids,'r') as ids:
+#     for line in ids:
+#         used_list.append(line.strip())
+
+with open(promoter_fasta,'r') as fa:
+    length = 0
+    checker = 0
+    while length < 600000:
+        for seq in SeqIO.parse(fa,'fasta'):
+            length = length + len(seq.seq)
+            outname = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/Phytozome/PhytozomeV13/Salba/v3.1/annotation/send_to_plantpan_' + checker + '.fa'
+            with open(outname,'w+') as out:
+                out.write('>' + str(seq.description) + '\n' + str(seq.seq) + '\n')

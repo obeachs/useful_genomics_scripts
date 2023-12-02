@@ -1,0 +1,110 @@
+import sys
+import Bio
+import re
+import itertools
+from Bio import SeqIO
+from Bio import SearchIO
+from Bio.Seq import Seq
+from Bio.Blast import NCBIXML
+import numpy as np
+import pandas as pd
+import itertools
+import argparse
+import subprocess
+import os
+from os import listdir
+
+cols = ['scaff','version','type','start','end','something','strand','full','ID']
+def gff_parser(gff):
+    readgff = pd.read_csv(gff, skiprows=3, sep='\t', header=None)
+    readgff.columns = ['scaffold', 'annotation_origin','type','start','end','dot','strand','number','ID']
+    readgff = readgff[readgff['type']=='gene']
+    return readgff
+
+def salba_id_fix(id):
+    start = id.find('ID')
+    newid = id[start+3:start+15]
+    return newid
+def tair_id_fix(id):
+    start = id.find('AT')
+    return id[start:start+9]
+def fasta_condenser(fasta, tair=0):
+    '''Preferably use this on the fasta file that has less info/annotation
+    with it - usually the query fasta'''
+    namelist = []
+    seqlist = []
+    if tair==0:
+        with open (fasta,'r') as fa:
+            for seq in SeqIO.parse(fa,'fasta'):
+                namelist.append(seq.id)
+                seqlist.append(str(seq.seq))
+        df = pd.DataFrame(list(zip(namelist, seqlist)),columns =['ID', 'Seq'])
+    else:
+        with open (fasta,'r') as fa:
+            for seq in SeqIO.parse(fa,'fasta'):
+                namelist.append(seq.id[0:9])
+                seqlist.append(str(seq.seq))
+        df = pd.DataFrame(list(zip(namelist, seqlist)),columns =['TAIR_ID', 'TAIR_Seq'])
+    return df
+
+assembly_fasta = fasta_condenser('/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/yang_assemblies/sinapis_alba/Sal.Chr.20210627.fasta')
+print(assembly_fasta)
+promoter_fasta = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/yang_assemblies/sinapis_alba/promoters/Sal.Chr.20210627_promoters.fa'
+promoter_and_gene_fasta = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/yang_assemblies/sinapis_alba/promoters/Sal.Chr.20210627_promoters_and_genes.fa'
+gff = gff_parser('/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/yang_assemblies/sinapis_alba/Sal.Chr.20210627.gff')
+#gff = gff_parser('/Volumes/sesame/joerecovery/genomes/TAIR/TAIR10_GFF3_genes.gff')
+gff['ID'] = gff['ID'].apply(salba_id_fix)
+print(gff)
+
+# '''Leaving this here in case I want to change promoter sequence length'''
+
+with open(promoter_fasta,'w+') as prom_fa, open(promoter_and_gene_fasta,'w+') as prom_and_gene_fa:
+    for index, row in gff.iterrows():
+        if row['strand'] == '+':
+            scaff_num =row['scaffold']
+            sequence = assembly_fasta[assembly_fasta['ID']==scaff_num]
+            sequence = sequence.tail(1)['Seq'].values[0]
+            # for i in range(4):
+            #     try:
+            #         sequence = sequence[i]
+            #     except:
+            #         continue
+            # print(sequence)
+            promoter_start = row['start'] - 2500
+            promoter_end = row['start']
+            seq_end = row['end']
+            promoter = sequence[promoter_start:promoter_end]
+            promoter_and_gene = sequence[promoter_start:seq_end]
+            prom_fa.write('>' + row['ID'] + '\n' + str(promoter) + '\n')
+            prom_and_gene_fa.write('>' + row['ID'] + '\n' + str(promoter_and_gene) + '\n')
+        if row['strand'] == '-':
+            scaff_num = row['scaffold']
+            sequence = assembly_fasta[assembly_fasta['ID']==scaff_num]
+            sequence = sequence.tail(1)['Seq'].values[0]
+            # for i in range(4):
+            #     try:
+            #         sequence = sequence['Seq'][i]
+            #     except:
+            #         continue
+            promoter_start = row['end'] + 2500
+            promoter_end = row['end']
+            seq_end = row['start']
+            promoter = Seq(sequence[promoter_end:promoter_start]).reverse_complement()
+            promoter_and_gene =Seq(sequence[seq_end:promoter_start]).reverse_complement()
+            prom_fa.write('>' + row['ID'] + '_reverse_complement' + '\n' + str(promoter) + '\n')
+            prom_and_gene_fa.write('>' + row['ID'] + '_reverse_complement' + '\n' + str(promoter_and_gene) + '\n')
+
+# used_list = []
+# with open(used_ids,'r') as ids:
+#     for line in ids:
+#         used_list.append(line.strip())
+
+# with open(promoter_fasta,'r') as fa:
+#     length = 0
+#     checker = 0
+#     while length < 600000:
+#         for seq in SeqIO.parse(fa,'fasta'):
+#             length = length + len(seq.seq)
+#             outname = '/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/Phytozome/PhytozomeV13/Salba/v3.1/annotation/send_to_plantpan_' + checker + '.fa'
+#             with open(outname,'w+') as out:
+#                 out.write('>' + str(seq.description) + '\n' + str(seq.seq) + '\n')

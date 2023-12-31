@@ -12,7 +12,7 @@ library(kableExtra)
 #YOU NEED GOOGLE CHROME INSTALLED FOR THIS
 #Function to export the table as png
 export_formattable <- function(f, file, width = "50%", height = NULL, 
-                               background = "white", delay = 0.2){
+                               background = "white", delay = 0.2, vwidth=2000, vheight=750){
       w <- as.htmlwidget(f, width = width, height = height)
       path <- html_print(w, background = background, viewer = NULL)
       url <- paste0("file:///", gsub("\\\\", "/", normalizePath(path)))
@@ -20,7 +20,7 @@ export_formattable <- function(f, file, width = "50%", height = NULL,
               file = file,
               selector = ".formattable_widget",
               delay = delay,
-              vwidth = 2000, vheight = 750)
+              vwidth = vwidth, vheight = vheight)
     }
 
 italicize <- function(x) {
@@ -61,11 +61,16 @@ setwd('~/Salba_RNA/')
 
 
 
-make_nice_table <- function(df,colnums=c(),outname){
+make_nice_table <- function(df,colnums=c(),outname,vwidth=2000, vheight=750){
   p <- format_columns_by_indices(df, indices = colnums)
-  export_formattable(p, outname)
+  export_formattable(p, outname, vwidth, vheight)
 }
+# f <- formattable(mtcars)
+# export_formattable(f,'~/Desktop/test_plot.pdf')
 
+# formattable(mtcars) %>% 
+#   as.htmlwidget() %>% 
+#   htmlwidgets::saveWidget(file="test.html")
 # #make_nice_table(df=df, colnums = c(2,3), outname ='/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/SUP_microarray_results/Final_data/final_figures_and_tables/RT-qPCR_microarray_value_comparison.png')
 
 # alp_data <- read.csv('/Volumes/sesame/ALP_Omics/sample_ids.csv') %>% dplyr::select(Genotype, Condition, ExperimentType, Library) %>% distinct()

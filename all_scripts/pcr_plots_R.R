@@ -15,9 +15,14 @@ theme <- theme(
 
 
 
-df2 <- read.csv('~/Documents/Salba_qPCRs/JB_Salba_ORGANS_TTG1-305-306_qPCR_analysis_copy.txt',sep='\t')
+df2 <- read.csv('~/Documents/Salba_qPCRs/JB_BRAPA_ORGANS_MID_LATE_307-311-317_qPCR_analysis.tsv',sep='\t') %>%
+filter(!grepl('bud',sam))
+
+df2 <- read.csv('~/Documents/Salba_qPCRs/JB Salba organs 412-414-416_qPCR_analysis.tsv',sep='\t')
 df2$sam_stage <- sub("MID", "_stage_8-9", df2$sam_type)
 df2$sam_stage <- sub("LATE", "_stage_10-11", df2$sam_stage)
+df2$sam_stage <- sub("mid", "_stage_8-9", df2$sam_type)
+df2$sam_stage <- sub("late", "_stage_10-11", df2$sam_stage)
 df2$forx <- paste(df2$sam_name, df2$sam_stage,sep = '_')
 df2$ordercol <- df2$forx
 df2$ordercol <- sub("stage_8-9", "EARLY", df2$ordercol)
@@ -42,6 +47,18 @@ deep <- df2 %>% filter(grepl('Sal10g28990L-GL1b_',forx))
 deep <- df2 %>% filter(grepl('Sal06g09840L-GIS3_',forx))
 deep <- df2 %>% filter(grepl('Sal04g13960L-GL1a-2',forx))
 deep <- df2 %>% filter(grepl('Sal04g13960L-GL1a_',forx))
+brap_late_ag <- df2 %>% filter(grepl('AG', forx))
+brap_late_CPC <- df2 %>% filter(grepl('CPC', forx))
+brap_late_TRY <- df2 %>% filter(grepl('TRY', forx))
+salab_late_TRY <- df2 %>% filter(grepl('LATE', forx))
+salab_late_TRY <- salab_late_TRY %>% filter(grepl('TRY', forx))
+brap_late_TTG1 <- df2 %>% filter(grepl('TTG1', forx))
+brap_gl1 <- df2 %>% filter(grepl('GL1', forx))
+brap_gl1_late <- brap_gl1 %>% filter(grepl('LATE',forx ))
+brap_gl1_mid <- brap_gl1 %>% filter(grepl('MID',forx ))
+brap_gl2 <- df2 %>% filter(grepl('GL2', forx))
+brap_gl2_late <- brap_gl2 %>% filter(grepl('LATE',forx ))
+brap_gl2_mid <- brap_gl2 %>% filter(grepl('MID',forx ))
 
 Sal04g07070L_CML42 <- df2 %>% filter(grepl('Sal04g07070L', forx))
 Sal08g05440L_XI1 <- df2 %>% filter(grepl('Sal08g05440L-XI1', forx))
@@ -49,9 +66,9 @@ scale_fill_brewer(palette = "Paired")
 #df2$sam_type <- factor(df2$sam_type, levels = c("stage_6-7", "stage_8-9", "stage_10-11"))
 #df2$forx <- paste(df2$sam, df2$sam_type,sep = '_')
 
-p <- ggplot(Sal08g05440L_XI1, aes(x=forx, y=cp, fill=sam_stage)) + 
+p <- ggplot(brap_gl2, aes(x=forx, y=cp, fill=sam_stage)) + 
     geom_bar(stat="identity", color="black", position=position_dodge()) +
-    geom_errorbar(aes(ymin=cp-sd, ymax=cp+sd), width=.2,position=position_dodge(.9))+
+    geom_errorbar(aes(ymin=cp-(0.5)*sd, ymax=cp+(0.5)*sd), width=.2,position=position_dodge(.9))+
     theme(axis.ticks.x = element_blank(),axis.text.x = element_text(angle=90),axis.line = element_line(colour = "black"),
     panel.background = element_blank())+
     guides(fill=guide_legend(title="Sample type"))+
@@ -59,10 +76,10 @@ p <- ggplot(Sal08g05440L_XI1, aes(x=forx, y=cp, fill=sam_stage)) +
     ylab('Value relative to reference TUB1')+
     xlab('Gene name and Sample')+
     theme(text = element_text(size = 20))+
-    theme(axis.text.x=element_text(angle=90,hjust=0.95,vjust=0.2))
+    theme(axis.text.x=element_text(angle=90,hjust=0.95,vjust=0.2))+theme
     #axis.text.x = element_text(angle = 90)
-print(p)
-    ggsave('~/thesis_figs_and_tables/salba/Sal08g05440L_XI1_qpcr.pdf',p,height = 10, width = 10)
+
+    ggsave('~/thesis_figs_and_tables/salba/SALBA_GL2_qpcr.pdf',p,height = 10, width = 10)
 
 title <- substr(deep$ordercol[1],1,12)
 deep$sam_stage <- gsub('stage','Stage',deep$sam_stage)

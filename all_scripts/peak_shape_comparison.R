@@ -13,8 +13,7 @@ library(DiffBind)
 library(pracma)
 library(rstatix)
 library(ggpubr)
-
-
+source('/Volumes/sesame/ALP_Omics/ChIP/validations/alp_visualisation_scripts.r')
 
 
 load("~/SIC-ChIP/SIC-ChIP_functions.RData") 
@@ -579,25 +578,24 @@ for(i in 1:length(list_2019)){
     get_peak_info_raw_peaks(peaks=peak_swn_2019[[i]],bigwig=list_2019[[i]], outname = out)
 }
 
-col_swn_stats <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/col_peaks_swn_down_stats') %>% mutate(exp='Col-0')
-clf_swn_stats <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/clf_peaks_swn_down_stats') %>% mutate(exp='clf28')
-clf28alp1_swn_stats <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/clf_alp1_peaks_swn_down_stats') %>% mutate(exp='clf28 alp1-1')
-clf28alp2_swn_stats <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/clf_alp2_peaks_swn_down_stats') %>% mutate(exp='clf28 alp2-1')
+col_swn_stats <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/SWN_specific_bound_and_down/stats/col_peaks_swn_down_stats') %>% mutate(exp='Col-0')
+clf_swn_stats <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/SWN_specific_bound_and_down/stats/clf_peaks_swn_down_stats') %>% mutate(exp='clf28')
+clf28alp1_swn_stats <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/SWN_specific_bound_and_down/stats/clf_alp1_peaks_swn_down_stats') %>% mutate(exp='clf28 alp1-1')
+clf28alp2_swn_stats <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/SWN_specific_bound_and_down/stats/clf_alp2_peaks_swn_down_stats') %>% mutate(exp='clf28 alp2-1')
 
 df <- rbind(col_swn_stats, clf_swn_stats, clf28alp1_swn_stats,clf28alp2_swn_stats)
 my_comparisons <- list( c("Col-0", "clf28 alp1-1"), c("Col-0", "clf28 alp2-1"), c("Col-0", "clf28"), c('clf28 alp1-1','clf28 alp2-1'),c('clf28','clf28 alp1-1'),
 c('clf28','clf28 alp2-1'))
+sample_sizes <- df %>%
+  group_by(exp) %>%
+  summarise(sample_size = n())
 
+df <- merge(df, sample_sizes, by = "exp")
 
 d <- ggviolin(
-  df, x = "exp", y = "w_h_ratio", color = "exp", palette = "Paired",
-  add = "jitter", # Add jittered points for better visualization
-  fill = "exp"    # Fill the violins with colors based on the "exp" variable
+  df, x = "exp", y = "width", color = "exp", palette = "Paired",
+  fill = "exp"
     ) +
-  stat_compare_means(comparisons = my_comparisons) +
-  stat_compare_means(label.y = 1) +
-  stat_compare_means(comparisons = my_comparisons) +
-  stat_compare_means(label.y = 1) +
   stat_summary(
     fun = "mean",   # Calculate mean for each "exp" group
     geom = "point", # Add points to the plot
@@ -609,9 +607,99 @@ d <- ggviolin(
     geom = "point", # Add points to the plot
     size = 3,       # Set the size of median points
     color = "red"   # Set the color of median points
-  ) +
+  ) + theme+
   theme(
     axis.text = element_text(size = 15),
     axis.title = element_text(size = 14, face = "bold")
+  ) + 
+  stat_compare_means(
+    comparisons = my_comparisons,
+    method = "wilcox.test",  # You can use other methods such as "wilcox.test", "anova", etc.
+    #label = "p.signif",
+    #size = 4,
+    #step.increase = 0.2
   )
-  ggsave('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/ratio.png',d, height=20, width=15)
+
+d_neg <- ggviolin(df, x = "exp", y = "width", palette = "Paired", fill = "exp") + 
+  stat_summary(
+    fun = "median",
+    geom = "point",
+    size = 3,
+    color = "red"
+  ) +
+  stat_summary(
+    fun = "mean",
+    geom = "point",
+    size = 3,
+    color = "black"
+  ) +
+  theme +
+  scale_y_continuous(
+    limits = c(0,max(df$width) + 2000)
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 90),
+    axis.text = element_text(size = 15),
+    axis.title = element_text(size = 14, face = "bold"),
+    axis.title.x = element_blank(),
+    legend.position = "none"
+  ) +
+  stat_compare_means(
+    comparisons = my_comparisons,
+    method = "t.test",
+    geom = "pointrange",  # Use pointrange for comparison bars
+    position = position_dodge(width = 0.75, height = 10000)  # Adjust the width as needed,
+  )+
+  # Adding sample size label for each 'exp' group
+  geom_text(aes(x = exp, y = 0, label = paste("N =", sample_size)), vjust = 2, hjust = 0.5, size = 4)
+
+
+  ggsave('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/SWN_specific_bound_and_down/stats/width.pdf',
+         d_neg, height=10, width=10,limitsize = FALSE)
+
+alp1 <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/SWN_all_binding_and_down/2020_stats_swn_all/alp1_me3_annotated_midpeak_shared_swn_shared_stats') %>% mutate(exp='alp1')
+alp2 <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/SWN_all_binding_and_down/2020_stats_swn_all/alp2_me3_annotated_midpeak_shared_swn_shared_stats') %>% mutate(exp='alp2')
+col <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_mutants/swn_overlap/SWN_all_binding_and_down/2020_stats_swn_all/col-0_me3_annotated_midpeak_shared_swn_shared_stats') %>% mutate(exp='Col-0')
+my_comparisons <- list(c('alp1','alp2'),c('alp1','Col-0'),c('Col-0','alp2'))
+df <- rbind(col, alp1, alp2)
+sample_sizes <- df %>%
+  group_by(exp) %>%
+  summarise(sample_size = n())
+
+df <- merge(df, sample_sizes, by = "exp") %>% filter(width < 6000)
+d_neg <- ggviolin(df, x = "exp", y = "width", palette = "Paired", fill = "exp") + 
+  stat_summary(
+    fun = "median",
+    geom = "point",
+    size = 3,
+    color = "red"
+  ) +
+  stat_summary(
+    fun = "mean",
+    geom = "point",
+    size = 3,
+    color = "black"
+  ) +
+  theme +
+  scale_y_continuous(
+    limits = c(0,1.5*(max(df$width)))
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 90),
+    axis.text = element_text(size = 15),
+    axis.title = element_text(size = 14, face = "bold"),
+    axis.title.x = element_blank(),
+    legend.position = "none"
+  ) +
+  stat_compare_means(
+    comparisons = my_comparisons,
+    method = "t.test",
+    geom = "pointrange",  # Use pointrange for comparison bars
+    position = position_dodge(width = 0.75, height = 10000)  # Adjust the width as needed,
+  )+
+  # Adding sample size label for each 'exp' group
+  geom_text(aes(x = exp, y = 0, label = paste("N =", sample_size)), vjust = -1, hjust = 0.5, size = 4)
+ggsave('~/Desktop/test_plot.pdf', d_neg)
+
+
+write.csv(df,'~/Desktop/test_data.csv')

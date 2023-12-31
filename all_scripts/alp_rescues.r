@@ -68,14 +68,20 @@ for(i in counts){
   name <- basename(i)
   exp_name <- sub("^(.*)_.*$", "\\1", name)
   print(exp_name)
-  df <- read.table(i, header = T) %>% mutate(exp=exp_name)
+  df <- read.table(i, header = T) %>% mutate(genotype=exp_name)
+  df$genotype <- gsub('clf28_alp1', 'clf28 alp1', df$genotype)
+  df$genotype <- gsub('clf28_alp2', 'clf28 alp2', df$genotype)
+  df$genotype <- gsub('col', 'Col-0', df$genotype)
   print(head(df))
   data <- rbind(df, data)
+
 }
 
 for(i in 1:length(rescues$ensembl_gene_id)){
   plot_fold_changes(data, rescues$ensembl_gene_id[i], paste0'~/thesis_figs_and_tables/alp/')
 }
+
+plot_fold_changes(data, 'AT5G10140', '~/Desktop/test_plot.pdf')
 
 summary_data <- FLC %>%
   group_by(exp) %>%

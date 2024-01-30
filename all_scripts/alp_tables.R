@@ -15,8 +15,10 @@ library(kableExtra)
 library(hypergea)
 library(kableExtra)
 library(gmp)
+
 source('/Volumes/sesame/joerecovery/scripts/formattable_functions_and_tables.R')
 source('/Volumes/sesame/ALP_Omics/ChIP/validations/alp_visualisation_scripts.r')
+source('/home/joe_aisling/ALP_Omics/ChIP/validations/alp_visualisation_scripts.r')
 source('~/Salba_RNA/scripts/GO_dotplotter.R')
 theme <- theme(
   axis.text.x = element_text(colour = "black"),

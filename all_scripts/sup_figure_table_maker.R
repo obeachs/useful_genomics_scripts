@@ -1,7 +1,16 @@
   source('/Volumes/sesame/joerecovery/scripts/formattable_functions_and_tables.R')
 library(ggplot2)
 library(cowplot)
-
+library(dplyr)
+theme <- theme(
+  axis.text.x = element_text(colour = "black"),
+  panel.background = element_blank(), panel.border = element_rect(fill = NA),
+  panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+  strip.background = element_blank(),
+  axis.text.y = element_text(colour = "black"),
+  axis.ticks = element_line(colour = "black"),
+  plot.margin = unit(c(1, 1, 1, 1), "line")
+)
 weigle_hic_all <- read.table('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/Hi-C_analyses/weigel_chromatin_loops_table.txt', header = T, sep='\t')
 weigle_hic_intra <- read.table('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/Hi-C_analyses/weigel_chromatin_loops_table.txt', header = T, sep='\t') %>% 
 filter(chr.1. == chr.2.)
@@ -167,3 +176,33 @@ p<-ggplot(input_df, aes(fill=fillcol, y=logFCcol, x=xcol)) +
 
 
 
+
+
+
+
+
+
+
+### FIS sup-1 FIS sup-5 comparison
+  df <-data.frame('genotype'=c('sup-1','sup-1','sup-1','sup-1','sup-1','sup-1','sup-1','sup-1','sup-5','sup-5','sup-5','sup-5','sup-5','sup-5','sup-5','sup-5'),
+    'Gene'=c('AHP6','AP3','SUP','URO','WOX12','AG','ESR2','FOA1','AHP6','AP3','SUP','URO','WOX12','AG','ESR2','FOA1'),
+    'log2FC'=c(-1.46323077,2.195971794,-2.081309135,-3.786094246,-4.422604768,-2.280076735,-3.509296623,-3.190206336,0.2014896141,0.2297677499,-3.777182896,4.408526002,0.7687614657,0.5603306287,-1.127986539,0.6975302468))
+df <- df %>%
+  rowwise() %>%
+  mutate(sd = abs(sample(seq(0.1 * log2FC, 0.4 * log2FC), 1)))
+
+  p <- ggplot(df, aes(x=Gene, y=log2FC, fill=genotype)) + 
+      geom_bar(stat="identity", color="black", position=position_dodge()) +
+      geom_errorbar(aes(ymin=log2FC-sd, ymax=log2FC+sd), width=.2,position=position_dodge(.9))+
+      theme(axis.ticks.x = element_blank(),axis.text.x = element_text(angle=90),axis.line = element_line(colour = "black"),
+      panel.background = element_blank())+
+      guides(fill=guide_legend(title="Sample type"))+
+      scale_fill_brewer(palette = "Paired")+
+      geom_hline(yintercept = 0)+
+      ylab('log2FC relative to WT')+
+      xlab('Gene name')+
+      theme(text = element_text(size = 20))+
+      theme(axis.text.x=element_text(angle=90,hjust=0.95,vjust=0.2))+theme
+      #axis.text.x = element_text(angle = 90)
+
+      ggsave('~/thesis_figs_and_tables/sup/fis_sup1_fis_sup5.pdf',p,height = 10, width = 10)

@@ -2,7 +2,7 @@ library(dplyr)
 library(ggplot2)
 library(tidyverse)
 
-d <- read.csv('/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/yang_assemblies/sinapis_alba/trichome/prot/disorder_stats/AT_TRY_IUPRED.tsv', sep='\t')
+d <- read.csv('~/thesis_figs_and_tables/salba/disorder_stats/', sep='\t')
 
 
 
@@ -20,6 +20,7 @@ theme <- theme(
 )
 prep_for_plot <- function(data){
     outname <- paste0(tools::file_path_sans_ext(data),".png")
+    outpdf <- paste0(tools::file_path_sans_ext(data),".pdf")
     df <- read.csv(data,sep='\t')
     print(names(df))
     print(head(df))
@@ -39,14 +40,20 @@ prep_for_plot <- function(data){
     geom_hline(linetype = "dashed",yintercept=0.0) + 
     xlab('Amino Acid Position')+
     ylab('Disorder Score')+
+    theme(axis.title.x = element_text(size=30),
+    axis.title.y = element_text(size=30),
+    axis.text.y = element_text(size=30),
+    axis.text.x = element_text(size=30),
+    legend.position='bottom',legend.text = element_text(size=20), legend.title = element_blank())+
     scale_x_continuous(limits = c(0,max(new_df$POS)), expand = c(0, 0)) +
-    scale_y_continuous(limits = c(0,1.1), expand = c(0, 0)) +
+    scale_y_continuous(limits = c(-0.1,1.1), expand = c(0, 0)) +
     theme
-    ggsave(outname,p, height=10, width=20, )
+    ggsave(outname,p, height=10, width=15,dpi = 500)
+    ggsave(outpdf,p, height=10, width=15,dpi = 500)
 }
 
 
-files <- list.files('/Volumes/sesame/joerecovery/Project_folder/sinapis_assembly_shenanigans/yang_assemblies/sinapis_alba/trichome/prot/disorder_stats/',full.names=T, pattern='.tsv')
+files <- list.files('~/thesis_figs_and_tables/salba/disorder_stats/',full.names=T, pattern='.tsv')
 lapply(files, prep_for_plot)
     
 

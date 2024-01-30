@@ -7,12 +7,13 @@
 library(dplyr)
 library(RColorBrewer)
 library(pals)
+library(ggplot2)
 protein_sequences <- system.file("extdata", "sample.fasta", package = "ggmsa")
 my_pal <- colorRampPalette(rev(brewer.pal(n = 6, name = "RdBu")))
 my_cutstom <- data.frame(names = c("A","C","-","G","T"), 
                          color = my_pal(5), 
                          stringsAsFactors = FALSE)
-
+my_cutstom$color[3] <- '#ffffff'
 color_df <- data.frame(
   stringsAsFactors = FALSE,
   names = c("R", "H", "K", "D","E","S","T","N","Q","C","U","G","P","A","V","I","L","M","F","Y","W","-","B","J","Z","O"),
@@ -24,7 +25,7 @@ color_df <- dplyr::left_join(my_cutstom, color_df,"names")
 grn <- read.csv('~/Salba_RNA/genelists/trichome_GRN.csv')
 
 
-
+AT4G18960_homologs_fixed_clustalo.fa
 prot_align_to_pdf_new <- function(clustal_output) { 
       file <- clustal_output
       fasta <- seqinr::read.fasta(file)
@@ -40,7 +41,7 @@ prot_align_to_pdf_new <- function(clustal_output) {
       #Char_width only effects the size of the font withinthe alignment blocks
       #it does not change the look or size of the seq_names
       pop <- ggmsa::ggmsa(file,seq_name = T, border =NA,char_width = 0.5,custom_color = color_df,font = 'mono')+ggmsa::facet_msa(25) 
-      ggplot2::ggsave(outname_file, pop, width = 15, height = len/10, limitsize = FALSE) 
+      ggplot2::ggsave(outname_file, pop, width = 210, height = 297, unit='mm', limitsize = FALSE, dpi=500) 
 }
 
 
@@ -57,12 +58,30 @@ dna_align_to_pdf_new <- function(clustal_output) {
       #Facet_msa defines how many bp per row there are
       #Char_width only effects the size of the font withinthe alignment blocks
       #it does not change the look or size of the seq_names
-      pop <- ggmsa::ggmsa(file, border = NA, seq_name = T, char_width = 0.5,custom_color = my_cutstom, font = 'mono')+ggmsa::facet_msa(25) 
-      ggplot2::ggsave(outname_file, pop, width = 15, height = len/10, limitsize = FALSE) 
+      pop <- ggmsa::ggmsa(fasta, border = NA, seq_name = T,custom_color = my_cutstom, font = 'mono')+ggmsa::facet_msa(25) 
+      ggplot2::ggsave(outname_file, pop, width = 210, height = 297, unit='mm', limitsize = FALSE, dpi=500) 
 }
 
+pop <-  ggmsa::ggmsa('/Users/josephbeegan/thesis_figs_and_tables/salba/homologs/prot/AT1G69120_pep_homologs_clustalo.fa',
+seq_name = T, border ='grey',char_width = 0.5,custom_color = color_df,font = 'mono')+ggmsa::facet_msa(50) 
+
+ggsave('~/thesis_figs_and_tables/salba/homologs/prot/AP1_homologs_pep.png', pop, width = 10,limitsize = F, dpi=500)
+ggsave('~/thesis_figs_and_tables/salba/homologs/prot/AP1_homologs_pep.pdf', pop, width = 10, limitsize = F)
+
+
+
+
+
+fasta <- seqinr::read.faswta('~/Salba_RNA/genelists/mads_homologs/homologs_fastas/AT2G46410_homologs_fixed_clustalo.fa')
+pop <-  ggmsa::ggmsa('~/thesis_figs_and_tables/salba/homologs/cds/AT2G30432_cdna_homologs_clustalo.fa',
+seq_name = T, border ='grey',char_width = 0.5,custom_color = my_cutstom,font = 'mono')+ggmsa::facet_msa(70) 
+
+ggsave('~/thesis_figs_and_tables/salba/homologs/TCL1_homologs_pep.png', pop, width = 10,limitsize = F)
+ggsave('~/thesis_figs_and_tables/salba/homologs/TCL1_homologs_pep.pdf', pop, width = 10, limitsize = F)     
+
+
 files <- list.files('/Users/josephbeegan/Salba_RNA/gffcompare/novel_transcripts_fastas/', full.names = TRUE, pattern = 'dedup.fa')
-names(files) <- files
+names(files) <- file
 for(file in files){
       print(file)
       for(i in grn$ID){

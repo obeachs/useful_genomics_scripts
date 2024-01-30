@@ -12,6 +12,12 @@ theme <- theme(
 )
 
 
+salba_palette <- c('BUD Stage 6-7'='#ddd2f4','BUD Stage 8-9'='#b696f7',
+ 'BUD Stage 10-11'='#9463f7',
+'GYN Stage 8-9'="#A6CEE3",'GYN Stage 10-11'="#1F78B4", 
+'STA Stage 8-9'="#FDBF6F", 'STA Stage 10-11'="#FF7F00",
+'PET Stage 8-9'="#faf8a4",'PET Stage 10-11'="#ECC846",
+'SEP Stage 8-9'="#B2DF8A",'SEP Stage 10-11'="#33A02C")
 
 
 

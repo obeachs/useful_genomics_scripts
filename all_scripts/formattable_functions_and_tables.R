@@ -73,7 +73,7 @@ make_nice_table <- function(df,colnums=c(),outname,vwidth=2000, vheight=750){
 #   htmlwidgets::saveWidget(file="test.html")
 # #make_nice_table(df=df, colnums = c(2,3), outname ='/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/SUP_microarray_results/Final_data/final_figures_and_tables/RT-qPCR_microarray_value_comparison.png')
 
-# alp_data <- read.csv('/Volumes/sesame/ALP_Omics/sample_ids.csv') %>% dplyr::select(Genotype, Condition, ExperimentType, Library) %>% distinct()
+  # alp_data <- read.csv('/Volumes/sesame/ALP_Omics/sample_ids.csv') %>% dplyr::select(Genotype, Condition, ExperimentType, Library) %>% distinct()
 # alp_data <- alp_data[!grepl('Input', alp_data$Condition),]
 # alp_data$Condition <- ifelse(grepl('H3', alp_data$Condition),alp_data$Condition, '') 
 # alp_data$ExperimentType <- paste(alp_data$Condition, alp_data$ExperimentType,sep = ' ')
@@ -96,11 +96,12 @@ make_nice_table <- function(df,colnums=c(),outname,vwidth=2000, vheight=750){
 # formattable(alp_data)
 
 # #Organ-specific floral genes
-# make_nice_table(data.frame(Organ=c('Gynoecium','Stamen','Petal','Sepal'),Count=c(1173,4099,469,1323)), outname = './results/flower/organ_specific_genes/stage_10-11_table.pdf')
-# make_nice_table(data.frame(Organ=c('Gynoecium','Stamen','Petal','Sepal'),Count=c(522,3273,504,2742)), outname = './results/flower/organ_specific_genes/stage_8-9_table.pdf')
-# make_nice_table(data.frame(Organ=c('Gynoecium','Stamen','Petal','Sepal'),Count=c(1251,5359,737,3088)), outname = './results/flower/organ_specific_genes/all_stages_table.pdf')
+make_nice_table(data.frame(Organ=c('Gynoecium','Stamen','Petal','Sepal'),Count=c(1173,4099,469,1323)), outname = './results/flower/organ_specific_genes/stage_10-11_table.pdf')
+make_nice_table(data.frame(Organ=c('Gynoecium','Stamen','Petal','Sepal'),Count=c(522,3273,504,2742)), outname = './results/flower/organ_specific_genes/stage_8-9_table.pdf')
+make_nice_table(data.frame(Organ=c('Gynoecium','Stamen','Petal','Sepal'),Count=c(1251,5359,737,3088)), outname = './results/flower/organ_specific_genes/all_stages_table.pdf')
 
-
+stage_8 <- data.frame(Organ=c('Gynoecium','Stamen','Petal','Sepal'),Count=c(1173,4099,469,1323))
+stage_10 <- data.frame(Organ=c('Gynoecium','Stamen','Petal','Sepal'),Count=c(522,3273,504,2742))
 
 
 

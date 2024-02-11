@@ -207,7 +207,7 @@ get_TE_statistics <- function(peaks_file, # this is strictly required (no defaul
                                             chr_col,
                                             start_col,
                                             end_col,
-                                            header = T, # this has a default option, not strictly required
+                                            header = T, 
                                             sep = "\t"){
 
   peaks <- read.delim(peaks_file, header = header, sep = sep) %>%
@@ -248,7 +248,7 @@ get_TE_statistics <- function(peaks_file, # this is strictly required (no defaul
   annotated <- ChIPpeakAnno::annotatePeakInBatch(
     gr,
     AnnotationData = gr_anno,
-    output = "nearestLocation",
+    output = "both",
     PeakLocForDistance = "middle")
   annotated <- Repitools::annoGR2DF(annotated)
   
@@ -309,6 +309,18 @@ for (i in files){
     get_TE_statistics(i,chr_col='Chromosome',start_col='Start',end_col = 'End')
   }
 }
+
+tab <- matrix(c(0.21*25000,))
+files <- list.files('/Volumes/sesame/ALP_Omics/ChIP/2019_ChIP/epic2/default_params/', 
+pattern='diff.txt', full.names=T)
+for (i in files){
+  if(grepl('diff', i)){
+    print(i)
+   get_TE_statistics(i,chr_col='Chromosome',start_col='Start',end_col = 'End')
+  }
+}
+
+
 
 get_TE_statistics('/Volumes/sesame/ALP_Omics/ChIP/2019_ChIP/epic2/clf_as_control/clf28_alp2_me3_diff_v_clf28.txt',chr_col='Chromosome',
 start_col='Start',end_col = 'End')
@@ -1359,7 +1371,23 @@ true_rescues <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_double_
 dplyr::rename(tair=ensembl_gene_id, 'Gene Name'=external_gene_name) %>% arrange(tair)
 
 
-num_rows <- nrow(true_rescues)
+TE_Arabidopsis <- read.csv('/Users/josephbeegan/thesis_figs_and_tables/alp/TE_stats/te_counts_arabidopsis.csv')
+t <- kbl(TE_Arabidopsis, format = "latex", booktabs = TRUE, latex_options = c("striped", "scale_down")) %>% 
+  row_spec(0, bold = FALSE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  column_spec(1, italic = TRUE) %>% 
+  kable_styling() %>%
+  column_spec(1:ncol(TE_Arabidopsis), border_left = FALSE, border_right = FALSE)
+
+TE_ALPs <- read.csv('~/thesis_figs_and_tables/alp/TE_stats/alp_mutants_counts_pvalues.csv') 
+TE_ALPs[6:7,]
+t <- kbl(t(TE_ALPs[6:7,]), format = "latex", booktabs = TRUE,linesep = "", latex_options = c("striped", "scale_down")) %>% 
+  row_spec(0, bold = TRUE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  column_spec(1, italic = F) %>% 
+  kable_styling() %>%
+  column_spec(1:ncol(t(TE_ALPs[6:7,])), border_left = FALSE, border_right = FALSE)
+
 
 # Split the dataframe into three parts
 df1 <- true_rescues[1:(num_rows/3), ]

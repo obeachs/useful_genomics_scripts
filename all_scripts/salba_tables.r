@@ -259,9 +259,9 @@ cat(t)
 
 
 
-# Differential expression analysis table 10-11 ---- 
+# Differential expression analysis table 8-9 ---- 
     gyn_v_sta <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_STA_gtf_redo_no_lrt') %>%
-    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 ) %>%
+    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
     gyn_v_pet <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_PET_gtf_redo_no_lrt') %>%
     dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05 ) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
     gyn_v_sep <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_SEP_gtf_redo_no_lrt') %>%
@@ -281,7 +281,7 @@ cat(t)
     sta_info <- data.frame('Comparison'=c('STA vs GYN','STA vs PET', 'STA v SEP'), 
     'Genes_Up'=c(nrow(sta_v_gyn %>% filter(log2FoldChange < 0)),nrow(sta_v_pet %>% filter(log2FoldChange >0)),nrow(sta_v_sep %>% filter(log2FoldChange >0))),
     'Genes_Down'=c(-1*(nrow(sta_v_gyn %>% filter(log2FoldChange >0))),-1*(nrow(sta_v_pet %>% filter(log2FoldChange <0))),-1*(nrow(sta_v_sep %>% filter(log2FoldChange <0)))))
-    names(gyn_info) <- gsub('\\.',' ', names(gyn_info))
+    names(sta_info) <- gsub('\\.',' ', names(sta_info))
 
     pet_v_gyn <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_PET_gtf_redo_no_lrt') %>%
     dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2)
@@ -346,7 +346,7 @@ cat(t)
     ggtitle('Petal')+
     ylab("Gene count")  
 
-  sep_p <- ggplot(gyn_info) +
+  sep_p <- ggplot(sep_info) +
     geom_segment( aes(x=Comparison, xend=Comparison, y=Genes_Up, yend=Genes_Down), color="grey") +
     geom_point( aes(x=Comparison, y=Genes_Up), color="#40B0A6",size=5 ) +
     geom_point( aes(x=Comparison, y=Genes_Down), color="#E1BE6A", size=5 ) +
@@ -365,11 +365,11 @@ cat(t)
 
 
 # DEGs Stage 8-9 -----
-  gyn_v_sta <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_STA_gtf_redo_no_lrt') %>%
+  gyn_v_sta <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/GYN_v_STA_gtf_redo_no_lrt') %>%
    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
-  gyn_v_pet <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_PET_gtf_redo_no_lrt') %>%
+  gyn_v_pet <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/GYN_v_PET_gtf_redo_no_lrt') %>%
    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05 ) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
-  gyn_v_sep <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_SEP_gtf_redo_no_lrt') %>%
+  gyn_v_sep <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/GYN_v_SEP_gtf_redo_no_lrt') %>%
     dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
   gyn_info <- data.frame('Comparison'=c('GYN vs STA','GYN vs PET', 'GYN v SEP'), 
   'Genes_Up'=c(nrow(gyn_v_sta %>% filter(log2FoldChange >0)),nrow(gyn_v_pet %>% filter(log2FoldChange >0)),nrow(gyn_v_sep %>% filter(log2FoldChange >0))),
@@ -377,36 +377,36 @@ cat(t)
 
 
 
-  sta_v_gyn <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_STA_gtf_redo_no_lrt') %>%
+  sta_v_gyn <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/GYN_v_STA_gtf_redo_no_lrt') %>%
    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2)
-  sta_v_pet <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/STA_v_PET_gtf_redo_no_lrt') %>%
+  sta_v_pet <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/STA_v_PET_gtf_redo_no_lrt') %>%
    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05 ) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
-  sta_v_sep <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/sta_v_SEP_gtf_redo_no_lrt') %>%
+  sta_v_sep <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/sta_v_SEP_gtf_redo_no_lrt') %>%
     dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
   sta_info <- data.frame('Comparison'=c('STA vs GYN','STA vs PET', 'STA v SEP'), 
   'Genes_Up'=c(nrow(sta_v_gyn %>% filter(log2FoldChange < 0)),nrow(sta_v_pet %>% filter(log2FoldChange >0)),nrow(sta_v_sep %>% filter(log2FoldChange >0))),
   'Genes_Down'=c(-1*(nrow(sta_v_gyn %>% filter(log2FoldChange >0))),-1*(nrow(sta_v_pet %>% filter(log2FoldChange <0))),-1*(nrow(sta_v_sep %>% filter(log2FoldChange <0)))))
 
 
-  pet_v_gyn <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_PET_gtf_redo_no_lrt') %>%
+  pet_v_gyn <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/GYN_v_PET_gtf_redo_no_lrt') %>%
    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2)
-  pet_v_sta <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/STA_v_PET_gtf_redo_no_lrt') %>%
+  pet_v_sta <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/STA_v_PET_gtf_redo_no_lrt') %>%
    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05 ) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
-  pet_v_sep <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/PET_v_SEP_gtf_redo_no_lrt') %>%
+  pet_v_sep <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/PET_v_SEP_gtf_redo_no_lrt') %>%
     dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
   pet_info <- data.frame('Comparison'=c('PET vs GYN','PET vs STA', 'PET v SEP'), 
   'Genes_Up'=c(nrow(pet_v_gyn %>% filter(log2FoldChange < 0)),nrow(pet_v_sta %>% filter(log2FoldChange < 0)),nrow(pet_v_sep %>% filter(log2FoldChange >0))),
   'Genes_Down'=c(-1*(nrow(sta_v_gyn %>% filter(log2FoldChange >0))),-1*(nrow(pet_v_sta %>% filter(log2FoldChange >0 ))),-1*(nrow(pet_v_sep %>% filter(log2FoldChange <0)))))
 
-   sep_v_gyn <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/GYN_v_SEP_gtf_redo_no_lrt') %>%
+   sep_v_gyn <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/GYN_v_SEP_gtf_redo_no_lrt') %>%
    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2)
-  sep_v_sta <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/STA_v_SEP_gtf_redo_no_lrt') %>%
+  sep_v_sta <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/STA_v_SEP_gtf_redo_no_lrt') %>%
    dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05 ) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
-  sep_v_pet <- read.csv('~/Salba_RNA/results/organs/tissue/stage_8-9/PET_v_SEP_gtf_redo_no_lrt') %>%
+  sep_v_pet <- read.csv('~/Salba_RNA/results/organs/tissue/stage_10-11/PET_v_SEP_gtf_redo_no_lrt') %>%
     dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
   sep_info <- data.frame('Comparison'=c('SEP vs GYN','SEP vs STA', 'SEP v PET'), 
-  'Genes_Up'=c(nrow(pet_v_gyn %>% filter(log2FoldChange < 0)),nrow(pet_v_sta %>% filter(log2FoldChange < 0)),nrow(pet_v_sep %>% filter(log2FoldChange <0))),
-  'Genes_Down'=c(-1*(nrow(sta_v_gyn %>% filter(log2FoldChange >0))),-1*(nrow(pet_v_sta %>% filter(log2FoldChange > 0 ))),-1*(nrow(pet_v_sep %>% filter(log2FoldChange > 0)))))
+  'Genes_Up'=c(nrow(sep_v_gyn %>% filter(log2FoldChange < 0)),nrow(sep_v_sta %>% filter(log2FoldChange < 0)),nrow(sep_v_pet %>% filter(log2FoldChange <0))),
+  'Genes_Down'=c(-1*(nrow(sep_v_gyn %>% filter(log2FoldChange >0))),-1*(nrow(sep_v_sta %>% filter(log2FoldChange > 0 ))),-1*(nrow(sep_v_pet %>% filter(log2FoldChange > 0)))))
 
  
   gyn_p <- ggplot(gyn_info) +
@@ -451,7 +451,7 @@ cat(t)
     ggtitle('Petal')+
     ylab("Gene count")  
 
-  sep_p <- ggplot(gyn_info) +
+  sep_p <- ggplot(sep_info) +
     geom_segment( aes(x=Comparison, xend=Comparison, y=Genes_Up, yend=Genes_Down), color="grey") +
     geom_point( aes(x=Comparison, y=Genes_Up), color="#40B0A6",size=5 ) +
     geom_point( aes(x=Comparison, y=Genes_Down), color="#E1BE6A", size=5 ) +
@@ -466,7 +466,7 @@ cat(t)
     ylab("Gene count")
 
   p <- ggpubr::ggarrange(gyn_p, sta_p, pet_p, sep_p, nrow = 1, ncol=4)
-  ggsave('~/Salba_RNA/results/organs/tissue/stage_8-9/DEGs_lollipop.pdf', p,width = 210, height = 150, units = "mm", limitsize = F, dpi=500)
+  ggsave('~/Salba_RNA/results/organs/tissue/stage_10-11/DEGs_lollipop.pdf', p,width = 210, height = 150, units = "mm", limitsize = F, dpi=500)
 
 
 # BUD DEG lollipop ----

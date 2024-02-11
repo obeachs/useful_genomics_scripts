@@ -83,7 +83,17 @@ df <- data.frame (Gene=c('PAP85', 'PMP','AT3G20280','PBP1','PMT5','CML1','CYP77A
 
 
 
-deg_tab <- read.csv('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/Ito_35S_microarray_data/dex_v_mock_35S-SUP-GR_DEGs.tsv', sep = '\t')
+deg_tab <- read.csv('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/Ito_35S_microarray_data/dex_v_mock_35S-SUP-GR_DEGs.tsv', sep = '\t') %>% 
+filter(P.Value < 0.05)
+deg_tab_sig <- read.csv('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/Ito_35S_microarray_data/dex_v_mock_35S-SUP-GR_DEGs.tsv', sep = '\t') %>% 
+filter(adj.P.Val < 0.05)
+for_donuts_all <- data.frame('Status'=c('Up','Down'),'Count'=c(1734,2140),'ratio'=c(45,55))
+for_donuts_sig <- data.frame('Status'=c('Up','Down'),'Count'=c(1,21),'ratio'=c(5,95))
+d <- donut(for_donuts_all)
+e <- donut(for_donuts_sig)
+combined_plot <- ggpubr::ggarrange(d, e, ncol = 2, common.legend = TRUE, legend = "bottom")
+ggsave('~/thesis_figs_and_tables/sup/ito_deg_donuts.pdf',combined_plot, limitsize = F,dpi=500)
+
 
 genes <- deg_tab$ORF
 GOI <- c('AT3G23130','AT3G23140','AT4G18960','AT3G54340')
@@ -96,7 +106,26 @@ eep <- biomaRt::select(org.At.tair.db, keys = genes,
   column = c('SYMBOL'), keytype = 'TAIR') %>% dplyr::rename(ORF=TAIR)
 
 
-full_df <- left_join(deg_tab, eep,by='ORF') %>% dplyr::select(ORF, SYMBOL, logFC, adj.P.Val)
+full_df <- left_join(deg_tab, eep,by='ORF') %>% dplyr::select(ORF, SYMBOL, logFC, adj.P.Val) %>%
+ mutate(SYMBOL=ifelse(is.na(SYMBOL),ORF, SYMBOL))
+
+full_df_top <- full_df %>% filter(adj.P.Val < 0.05) %>% distinct()
+
+color.me <- which(full_df_top$logFC > 0)
+c("#E1BE6A","#40B0A6"))
+full_df_top$color <- ifelse(full_df_top$logFC > 1, "#40B0A6", "#E1BE6A")
+
+t <- kable(full_df_top[, -ncol(full_df_top)], format = "latex", booktabs = TRUE, linesep = "", latex_options = c("striped", "scale_down")) %>% 
+  row_spec(0, bold = TRUE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  column_spec(3, color = full_df_top$color) %>%  # Apply color based on the 'color' column
+  kable_styling() %>%
+  column_spec(1:ncol(full_df_top), border_left = FALSE, border_right = FALSE)
+
+# 
+
+
+
 color_tile_mean <- function (...) {
   formatter("span", style = function(x) {
     style(display = "block",

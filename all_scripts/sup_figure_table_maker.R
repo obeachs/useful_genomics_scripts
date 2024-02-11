@@ -2,6 +2,8 @@
 library(ggplot2)
 library(cowplot)
 library(dplyr)
+library(wesanderson)
+wes_palette("Darjeeling1")
 theme <- theme(
   axis.text.x = element_text(colour = "black"),
   panel.background = element_blank(), panel.border = element_rect(fill = NA),
@@ -32,37 +34,62 @@ lchr5 <- length(chr5$chr.1.)
 samps <- c('Chr1','Chr2','Chr3','Chr4','Chr5')
 count <- c(lchr1,lchr2,lchr3,lchr4,lchr5)
 hicup_count <- c(3782,2440,2928,2318,3294)
-
+g <- read.csv('~/thesis_figs_and_tables/sup/weigel_hic_interactions.csv')
 
 nb.cols <- 8
 mycolors <- colorRampPalette(brewer.pal(8, "Paired"))(8)
-g <- tibble('Chromosome'=samps, 'Count'=count) %>% mutate(ratio=round((count/sum(count)*100)))
-write.csv(g,'~/thesis_figs_and_tables/sup/weigel_hic_interactions.csv', row.names=F, quote=F)
+g <- g %>% mutate(ratio=round((Count/sum(Count)*100)))
+
+
+donut_colours_chrom <- wes_palette("Darjeeling1")
 make_nice_table(g,outname = '~/thesis_figs_and_tables/sup/weigel_hic_interactions.png')
 raw <- ggplot(g, aes(x = 2, y = Count, fill = Chromosome)) +
   geom_bar(stat = "identity", color = "white") +
   coord_polar(theta = "y", start = 0)+
-  scale_fill_manual(values = mycolors) +
+  scale_fill_manual(values = donut_colours_chrom) +
   theme_void()+
   xlim(0.5, 2.5)+
   annotate(geom = 'text', x = 0.5, y = 0,size=10, label = paste0('Total: ',sum(g$Count)))+
   theme(legend.text = element_text(size=30))+
   theme(legend.title = element_text(size=30))+
-  geom_text(aes(label = paste0(ratio,'%')),position = position_stack(vjust = 0.5),size=5, color = "white") +
+  geom_text(aes(label = paste0(ratio,'%')),position = position_stack(vjust = 0.5),size=10, color = "white") +
   theme(axis.text = element_text(size = 5, colour="white"))
 
 
 ggsave('~/thesis_figs_and_tables/sup/weigel_hic_interactions_donut.pdf', raw, height=10, width=10)
 
-hicup <- ggplot(g, aes(x = 2, y = hicup_count, fill = Chromosome)) +
+
+hicup_df <- data.frame('Chromosome'=c('Chr1','Chr2','Chr3','Chr4','Chr5'),'Count'=hicup_count)
+hicup_df$ratio <- round((hicup_df$Count/sum(hicup_df$Count)*100))
+
+
+raw_hic <- ggplot(hicup_df, aes(x = 2, y = Count, fill = Chromosome)) +
   geom_bar(stat = "identity", color = "white") +
   coord_polar(theta = "y", start = 0)+
-  scale_fill_manual(values = mycolors) +
+  scale_fill_manual(values = donut_colours_chrom) +
   theme_void()+
   xlim(0.5, 2.5)+
-  annotate(geom = 'text', x = 0.5, y = 0,size=10, label = paste0('Total: ',sum(g$HiCUP_Count)))+
-   theme(legend.text = element_text(size=30))+
-   theme(legend.title = element_text(size=30))
+  annotate(geom = 'text', x = 0.5, y = 0,size=10, label = paste0('Total: ',sum(hicup_df$Count)))+
+  theme(legend.text = element_text(size=30))+
+  theme(legend.title = element_text(size=30))+
+  geom_text(aes(label = paste0(ratio,'%')),position = position_stack(vjust = 0.5),size=10, color = "white") +
+  theme(axis.text = element_text(size = 5, colour="white"))
+
+
+p <- ggpubr::ggarrange(raw_hic, raw, ncol=2, nrow = 1, common.legend = TRUE, legend="bottom")
+ggsave('~/thesis_figs_and_tables/sup/hic_interactions.pdf', p)
+
+t <- kable(hicup_df[,1:2], format = "latex", booktabs = TRUE, linesep = "", latex_options = c("striped", "scale_down")) %>% 
+  row_spec(0, bold = TRUE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  kable_styling() %>%
+  column_spec(1:(ncol(hicup_df)), border_left = FALSE, border_right = FALSE)
+
+t <- kable(g[,1:2], format = "latex", booktabs = TRUE, linesep = "", latex_options = c("striped", "scale_down")) %>% 
+  row_spec(0, bold = TRUE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  kable_styling() %>%
+  column_spec(1:(ncol(g)-1), border_left = FALSE, border_right = FALSE)
 
 
 p <- kbl(g) %>%
@@ -125,6 +152,27 @@ fis_0 <- read.csv('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/SUP
 fis_2 <- read.csv('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/SUP_microarray_results/Final_data/2DAIMEGAFILE.CSV') %>% mutate(exp='2.5 DAI')
 fis_3 <-read.csv('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/SUP_microarray_results/Final_data/3DAIMEGAFILE.CSV') %>% mutate(exp='3.5 DAI')
 fis_5 <-read.csv('/Volumes/sesame/joerecovery/Project_folder/microarray_SUP/SUP_microarray_results/Final_data/5DAIMEGAFILE.CSV') %>% mutate(exp='5 DAI')
+
+eep <- biomaRt::select(org.At.tair.db, keys = genes,
+  column = c('SYMBOL'), keytype = 'TAIR') %>% dplyr::rename(locus=TAIR)
+
+
+fis <- fis_5 %>% left_join(eep) %>% mutate(SYMBOL=ifelse(is.na(SYMBOL),locus,SYMBOL)) %>%
+ distinct()%>% filter(adj.P.Val < 0.05) %>% mutate(colour=ifelse(logFC > 0, "#40B0A6", "#E1BE6A")) %>%
+  dplyr::select(locus, SYMBOL,logFC,adj.P.Val,colour) %>% mutate(logFC= round(as.numeric(logFC), digits=5),adj.P.Val=round(as.numeric(adj.P.Val), digits=5)) %>%
+  filter(!grepl('AT',SYMBOL)) %>% filter(!grepl('At',SYMBOL)) %>% arrange(desc(abs(logFC))) 
+
+names(fis) <- c('TAIR ID','Gene Name', 'log2FC','FDR','colour')
+
+t <- kable(fis[1:60,1:4], format = "latex", booktabs = TRUE, linesep = "", latex_options = c("striped", "scale_down")) %>% 
+  row_spec(0, bold = TRUE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  column_spec(3, color = fis$colour[1:60]) %>%  # Apply color based on the 'color' column
+  kable_styling() %>%
+  column_spec(1:(ncol(fis)-2), border_left = FALSE, border_right = FALSE)
+t
+
+
 df <- rbind(fis_0,fis_2, fis_3, fis_5)
 sup <- df %>%filter(locus=='AT3G23130')
 sup <- plot_fold_changes(sup)
@@ -173,10 +221,20 @@ p<-ggplot(input_df, aes(fill=fillcol, y=logFCcol, x=xcol)) +
   p
 }
 
+#Microarray qpcr comparisons
+data <- data.frame('Gene Name'=c('PBP1','PMT5','CML1','CYP77A5P','SUP','URO','AP3','FOA1','ESR2','WOX12','AHP6','AG'),
+'RT-qPCR'=c(1.316,-1.239,1.102,-0.299,-3.777,4.409,0.769,0.698,-1.128,0.202,0.230,0.560),
+'Microarray'=c(1.162,-1.039,-1.143,-0.265,-3.495,1.143,-.087,0.013,0.595,-1.447,0.327,0.05315))
 
-
-
-
+data$mic_colour <- ifelse(data$Microarray > 1, "#40B0A6", "#E1BE6A")
+data$RT_colour <- ifelse(data$RT.qPCR > 1, "#40B0A6", "#E1BE6A")
+t <- kable(data[,1:3], format = "latex", booktabs = TRUE, linesep = "", latex_options = c("striped", "scale_down")) %>% 
+  row_spec(0, bold = TRUE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  column_spec(3, color = data$mic_colour) %>%  # Apply color based on the 'color' column
+  column_spec(2, color = data$RT_colour) %>%  # Apply color based on the 'color' column
+  kable_styling() %>%
+  column_spec(1:(ncol(data)-2), border_left = FALSE, border_right = FALSE)
 
 
 

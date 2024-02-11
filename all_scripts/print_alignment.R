@@ -16,8 +16,8 @@ my_cutstom <- data.frame(names = c("A","C","-","G","T"),
 my_cutstom$color[3] <- '#ffffff'
 color_df <- data.frame(
   stringsAsFactors = FALSE,
-  names = c("R", "H", "K", "D","E","S","T","N","Q","C","U","G","P","A","V","I","L","M","F","Y","W","-","B","J","Z","O"),
-  color = c("#d8f3cf", "#9ff381", "#009E73","#ebe94f","#faf88a","#FC9B7C","#FCA88B","#F34D37","#F75B40","#dcf3ff","#baf2ef","#a2d2df","#259aa1","#d2d4dc","#afafaf","#f8f8fa","#e5e6eb","#c0c2ce","#99a3ad","#879eb5","#c2c2c2","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff")
+  names = c('*',"R", "H", "K", "D","E","S","T","N","Q","C","U","G","P","A","V","I","L","M","F","Y","W","-","B","J","Z","O"),
+  color = c('#bdbdb5',"#d8f3cf", "#9ff381", "#009E73","#ebe94f","#faf88a","#FC9B7C","#FCA88B","#F34D37","#F75B40","#dcf3ff","#baf2ef","#a2d2df","#259aa1","#d2d4dc","#afafaf","#f8f8fa","#e5e6eb","#c0c2ce","#99a3ad","#879eb5","#c2c2c2","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff")
 )
 color_df <- dplyr::left_join(my_cutstom, color_df,"names")
 
@@ -62,10 +62,10 @@ dna_align_to_pdf_new <- function(clustal_output) {
       ggplot2::ggsave(outname_file, pop, width = 210, height = 297, unit='mm', limitsize = FALSE, dpi=500) 
 }
 
-pop <-  ggmsa::ggmsa('/Users/josephbeegan/thesis_figs_and_tables/salba/homologs/prot/AT1G69120_pep_homologs_clustalo.fa',
+pop <-  ggmsa::ggmsa('~/thesis_figs_and_tables/sup/sequence/sup_uro_protein_clustalo.fa',
 seq_name = T, border ='grey',char_width = 0.5,custom_color = color_df,font = 'mono')+ggmsa::facet_msa(50) 
 
-ggsave('~/thesis_figs_and_tables/salba/homologs/prot/AP1_homologs_pep.png', pop, width = 10,limitsize = F, dpi=500)
+ggsave('~/thesis_figs_and_tables/sup/sequence/sup_uro_protein_clustalo.png', pop, width = 10,limitsize = F, dpi=500)
 ggsave('~/thesis_figs_and_tables/salba/homologs/prot/AP1_homologs_pep.pdf', pop, width = 10, limitsize = F)
 
 

@@ -180,6 +180,10 @@ species_counts <- read.csv('~/Salba_RNA/results/flower/mads/mads_homolog_counts.
   nnew_gennes <- genes %>% separate_rows('gene_id')
   length(unique(nnew_gennes$gene_id))
 
+
+  type_ii <- read.csv('~/Salba_RNA/results/flower/mads/mikc_mads', header=F)
+
+
 #Trichome gene info 
 trichome_grn_arabidopsis <- read.csv('~/Salba_RNA/genelists/trichome_GRN_salba.csv') %>% dplyr::select(gene_name, effect) %>%
   dplyr::rename(Gene_Name=gene_name,Effect=effect) %>% distinct()
@@ -540,12 +544,50 @@ cat(t)
     ylab("Gene count")  
 
 
-
-
-ggsave('~/Desktop/test_plot.pdf', eight_p)
-
-
-
-
   p <- ggpubr::ggarrange(six_p, eight_p, ten_p, nrow = 1, ncol=3)
   ggsave('~/Salba_RNA/results/buds/DEGs_lollipop.pdf', p,width = 210, height = 150, units = "mm", limitsize = F, dpi=500)
+
+
+
+## Organs stages DEGs lollipops ----
+  gyn <-  read.csv('~/Salba_RNA/results/gyn/stage_8-9_v_stage_10-11_gtf_redo_no_lrt') %>%
+   dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
+  sta <-  read.csv('~/Salba_RNA/results/sta/stage_8-9_v_stage_10-11_redo_no_lrt') %>%
+ dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
+  pet <-  read.csv('~/Salba_RNA/results/pet/stage_8-9_v_stage_10-11_redo_no_lrt') %>%
+   dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
+  sep <-  read.csv('~/Salba_RNA/results/sep/stage_8-9_v_stage_10-11_redo_no_lrt') %>%
+   dplyr::select(gene_id, log2FoldChange, padj) %>% na.omit %>% filter(padj < 0.05) %>% filter(log2FoldChange >2 |log2FoldChange < -2 )
+  gyn_info <- data.frame('Comparison'=c('GYN'), 
+  'Genes_Up'=c(nrow(gyn %>% filter(log2FoldChange >0))),
+  'Genes_Down'=c(-1*(nrow(gyn %>% filter(log2FoldChange <0)))))
+
+   sta_info <- data.frame('Comparison'=c('STA'), 
+  'Genes_Up'=c(nrow(sta %>% filter(log2FoldChange >0))),
+  'Genes_Down'=c(-1*(nrow(sta %>% filter(log2FoldChange <0)))))
+
+   pet_info <- data.frame('Comparison'=c('PET'), 
+  'Genes_Up'=c(nrow(pet %>% filter(log2FoldChange >0))),
+  'Genes_Down'=c(-1*(nrow(pet %>% filter(log2FoldChange <0)))))
+
+   sep_info <- data.frame('Comparison'=c('SEP'), 
+  'Genes_Up'=c(nrow(sep %>% filter(log2FoldChange >0))),
+  'Genes_Down'=c(-1*(nrow(sep %>% filter(log2FoldChange <0)))))
+
+
+df <- rbind(gyn_info, sta_info, pet_info, sep_info)
+ df_p <- ggplot(df) +
+    geom_segment( aes(x=Comparison, xend=Comparison, y=Genes_Up, yend=Genes_Down), color="grey") +
+    geom_point( aes(x=Comparison, y=Genes_Up), color="#40B0A6",size=5 ) +
+    geom_point( aes(x=Comparison, y=Genes_Down), color="#E1BE6A", size=5 ) +
+    geom_hline(yintercept = 0,linetype = "dashed")+
+    theme(
+      legend.position = "none",
+      axis.text.x = element_text(angle=90),
+      axis.title.y = element_blank()
+    ) + theme+
+    ggtitle('Floral Organs - Stage 8-9 vs. Stage 10-11')+
+    scale_x_discrete(limits=c('GYN', 'STA', 'PET','SEP'))+
+    ylim(-3000, 3000)+
+    ylab("Gene count")
+ggsave('~/Salba_RNA/results/organs/stage_comparisons_DEGs.pdf',df_p,width = 210, height = 150, units = "mm", limitsize = F, dpi=500)

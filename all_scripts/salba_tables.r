@@ -108,8 +108,14 @@ cat(t)
   column_spec(1:ncol(transcript_data), border_left = FALSE, border_right = FALSE)
   cat(t)
 ##Alignment stats
-stats <- read.csv('~/Salba_RNA/alignment_stats.csv') %>% mutate(Sample=gsub('_sorted','', Sample)) %>% mutate(Sample.1=gsub('_sorted','', Sample.1))
-t <- kbl(stats, format = "latex", booktabs = TRUE, latex_options = c("striped", "scale_down")) %>% 
+stats <- read.csv('~/Salba_RNA/alignment_stats.csv') %>% mutate(Sample=gsub('_sorted','', Sample)) %>% 
+mutate(Sample.1=gsub('_sorted','', Sample.1)) %>% mutate(Sample=gsub('-Late-',' Stage 10-11_', Sample))%>% 
+mutate(Sample=gsub('-Mid-',' Stage 8-9_', Sample)) %>% mutate(Sample=gsub('-Early-',' Stage 6-7_', Sample)) %>%
+mutate(Sample.1=gsub('-Late-',' Stage 10-11_', Sample.1))%>% 
+mutate(Sample.1=gsub('-Mid-',' Stage 8-9_', Sample.1)) %>% mutate(Sample.1=gsub('-Early-',' Stage 6-7_', Sample.1))
+
+t <- kbl(stats, format = "latex", booktabs = TRUE, linesep = "",latex_options = c("striped", "scale_down")) %>% 
+
   row_spec(0, bold = TRUE) %>% 
   column_spec(c(1,3),bold = TRUE) %>% 
   kable_styling() %>%
@@ -132,6 +138,13 @@ t <- kbl(stage_10, format = "latex", booktabs = TRUE, latex_options = c("striped
   column_spec(1:4, border_left = FALSE, border_right = FALSE)
 cat(t)
 
+
+#RNA-seq samples table
+s2c <- read.table("./sample_ids.csv",
+    sep = ",",
+    header = TRUE,
+    stringsAsFactors = TRUE
+  ) %>% mutate(Stage=gsub(Stage, '8', 'Stage 8-9')) 
 
 # early and late flowering genes ---- 
   full_table <- read.csv('~/Salba_RNA/genelists/key_players.txt')
@@ -575,7 +588,7 @@ cat(t)
   'Genes_Down'=c(-1*(nrow(sep %>% filter(log2FoldChange <0)))))
 
 
-df <- rbind(gyn_info, sta_info, pet_info, sep_info)
+ df <- rbind(gyn_info, sta_info, pet_info, sep_info)
  df_p <- ggplot(df) +
     geom_segment( aes(x=Comparison, xend=Comparison, y=Genes_Up, yend=Genes_Down), color="grey") +
     geom_point( aes(x=Comparison, y=Genes_Up), color="#40B0A6",size=5 ) +
@@ -591,3 +604,10 @@ df <- rbind(gyn_info, sta_info, pet_info, sep_info)
     ylim(-3000, 3000)+
     ylab("Gene count")
 ggsave('~/Salba_RNA/results/organs/stage_comparisons_DEGs.pdf',df_p,width = 210, height = 150, units = "mm", limitsize = F, dpi=500)
+
+
+
+## Trichome FPKM plots ---- 
+fpkms <- read.csv('~/Salba_RNA/genelists/organ_FPKMS.csv')
+
+plot_fold_changes('MSTRG.31284','~/Desktop/')

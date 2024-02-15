@@ -13,7 +13,8 @@ library(coriell)
 library(scales)
 library(gtools)
 library(writexl)
-scale_fill_manual(values = c("H3K27me3 Down" = "#E1BE6A", "H3K27me3 Up" = "#40B0A6"))
+scale_fill_manual(values = c("H3K27me3 Down" = "
+", "H3K27me3 Up" = "#40B0A6"))
 
 theme <- theme(
   axis.text.x = element_text(colour = "black"),

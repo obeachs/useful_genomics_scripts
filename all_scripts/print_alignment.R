@@ -62,10 +62,10 @@ dna_align_to_pdf_new <- function(clustal_output) {
       ggplot2::ggsave(outname_file, pop, width = 210, height = 297, unit='mm', limitsize = FALSE, dpi=500) 
 }
 
-pop <-  ggmsa::ggmsa('~/thesis_figs_and_tables/sup/sequence/sup_uro_protein_clustalo.fa',
-seq_name = T, border ='grey',char_width = 0.5,custom_color = color_df,font = 'mono')+ggmsa::facet_msa(50) 
+pop <-  ggmsa::ggmsa('/Users/josephbeegan/thesis_figs_and_tables/salba/homologs/prot/AT5G41315_pep_homologuesclustalo.fa',
+seq_name = T, border ='grey',char_width = 0.5,custom_color = color_df,font = 'mono')+ggmsa::facet_msa(100) 
 
-ggsave('~/thesis_figs_and_tables/sup/sequence/sup_uro_protein_clustalo.png', pop, width = 10,limitsize = F, dpi=500)
+ggsave('/Users/josephbeegan/thesis_figs_and_tables/salba/homologs/prot/AT5G41315_pep_homologuesclustalo_alignment_figure.png', pop, width = 10,height=30,dpi=500, limitsize = F)
 ggsave('~/thesis_figs_and_tables/salba/homologs/prot/AP1_homologs_pep.pdf', pop, width = 10, limitsize = F)
 
 
@@ -74,7 +74,7 @@ ggsave('~/thesis_figs_and_tables/salba/homologs/prot/AP1_homologs_pep.pdf', pop,
 
 fasta <- seqinr::read.faswta('~/Salba_RNA/genelists/mads_homologs/homologs_fastas/AT2G46410_homologs_fixed_clustalo.fa')
 pop <-  ggmsa::ggmsa('~/thesis_figs_and_tables/salba/homologs/cds/AT2G30432_cdna_homologs_clustalo.fa',
-seq_name = T, border ='grey',char_width = 0.5,custom_color = my_cutstom,font = 'mono')+ggmsa::facet_msa(70) 
+seq_name = T, border ='grey',char_width = 0.5,custom_color = my_cutstom,font = 'mono')+ggmsa::facet_msa(0) 
 
 ggsave('~/thesis_figs_and_tables/salba/homologs/TCL1_homologs_pep.png', pop, width = 10,limitsize = F)
 ggsave('~/thesis_figs_and_tables/salba/homologs/TCL1_homologs_pep.pdf', pop, width = 10, limitsize = F)     

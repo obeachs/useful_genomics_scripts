@@ -44,7 +44,7 @@ plot_fold_changes <- function(gene, outprefix, se_done='TRUE'){
     "PET Stage 8-9", "PET Stage 10-11",
     "SEP Stage 8-9", "SEP Stage 10-11"
     )
-    input_df <- read.csv('~/Salba_RNA/genelists//organ_FPKMS.csv')
+    input_df <- read.csv('~/Salba_rna/genelists//organ_FPKMS.csv')
     organ_list <- list('GYN','STA','PET','SEP')
     df <- input_df %>% filter(grepl(gene, gene_id)) %>% 
         filter(!grepl('BUD', sample)) %>% 

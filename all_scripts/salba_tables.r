@@ -194,9 +194,66 @@ species_counts <- read.csv('~/Salba_RNA/results/flower/mads/mads_homolog_counts.
   length(unique(nnew_gennes$gene_id))
 
 
-  type_ii <- read.csv('~/Salba_RNA/results/flower/mads/mikc_mads', header=F)
+  type_ii <- read.csv('~/Salba_rna/results/flower/mads/mikc_mads', header=F)
+  names <- read.csv('~/Salba_rna/genelists/all_hits_names.csv') %>% dplyr::select(-gene_id) %>% distinct()
+  
+  all_hits <- read.csv('~/Salba_rna/genelists/all_hits_strict.csv', sep='\t') %>% separate_rows(gene_id) %>% 
+    distinct() %>% filter(tair %in% type_ii$V1) %>% filter(gene_id !="") %>% left_join(names)
+  fpkms <- read.csv('~/Salba_rna/genelists/organ_FPKMS.csv') %>% filter(gene_id %in% all_hits$gene_id) %>% left_join(all_hits) %>%
+    left_join(names) %>% filter(grepl('BUD', sample)) %>% distinct()
+  
+  plot_data_column <- function(names) {
+    temp <- all_hits %>% filter(gene.name == names)
+    temp_fpkms <- fpkms %>% filter(gene_id %in% temp$gene_id) %>% distinct()
+    
+    c <- ggplot(temp_fpkms, aes(x = sample, y = avg_FPKM, fill = gene_id, color = gene_id)) +
+      geom_point(position = position_dodge(width = .20), size = 4, stroke = 0) +
+      geom_line(position = position_dodge(width = .20), aes(group = gene_id), linetype='dashed') +
+      scale_color_manual(values = wes_palette) +
+      scale_x_discrete(labels=c("6-7","8-9","10-11"))+
+      ggtitle(names) +  # Set the plot title as the 'gene.name' column value
+      theme_minimal() +
+      labs(y = NULL) +
+      theme(
+        #axis.text.x = element_blank(),
+        legend.position = 'none',
+        panel.background = element_blank(),
+        panel.border = element_rect(fill = NA, color = "black"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_blank(),
+        axis.text.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.ticks = element_blank(),
+        plot.title = element_text(margin = margin(b = -1)),
+        plot.margin = unit(c(0, 0, 0, 0), "line")
+      ) + guides(fill = "none", color = "none")
+    
+    return(c)
+  }
 
+  plot_list2 <- lapply(unique(all_hits$gene.name), plot_data_column)
+  p <- ggpubr::ggarrange(plotlist = plot_list2, ncol = 4, nrow=9)
+  ggsave('/home/joe_aisling/thesis_figs/salba/mikc_dotplots_salba.png', p, dpi=500,width = 210, height = 297, units = 'mm', limitsize = FALSE)
 
+  
+##Promoter anaylsis trichomes ---- 
+  mbw <- read.csv('Salba_rna/genelists/trichome_homologs/MBW_list.csv')
+  AG_jaspar_results <- list.files('Salba_rna/results/promoter_jaspar/', full.names = T)
+  for(i in mbw$tair){
+    test <- AG_jaspar_results[grepl(i,AG_jaspar_results)]
+    if(length(test) > 0){
+      f <- read.csv(test) %>% dplyr::select(Gene,Score_sense_strand, Score_antisense_strand)
+      print(f)
+    }
+  }
+  rownames(f) <- f$Gene
+  f <- f %>% dplyr::select(-c(Gene,Score_antisense_strand)
+  p <- pheatmap::pheatmap(f,treeheight_row = 0, color=colorRampPalette(c("#A6CEE3", "white", "#FF7F00"))(15),
+                          , fontsize_row = 7,fontsize_col = 10,cellwidth = 5,
+                          cellheight = 5, cluster_cols=F,angle_col = 90)
+  
+  
 #Trichome gene info 
 trichome_grn_arabidopsis <- read.csv('~/Salba_RNA/genelists/trichome_GRN_salba.csv') %>% dplyr::select(gene_name, effect) %>%
   dplyr::rename(Gene_Name=gene_name,Effect=effect) %>% distinct()
@@ -611,3 +668,12 @@ ggsave('~/Salba_RNA/results/organs/stage_comparisons_DEGs.pdf',df_p,width = 210,
 fpkms <- read.csv('~/Salba_RNA/genelists/organ_FPKMS.csv')
 
 plot_fold_changes('MSTRG.31284','~/Desktop/')
+
+
+input_df <- read.csv('~/Salba_rna/genelists//organ_FPKMS.csv')
+
+
+
+
+## Selection of FPKM plots for some genes ----
+plot_fold_changes('Sal09g01480', '/home/joe_aisling/thesis_figs/salba/')

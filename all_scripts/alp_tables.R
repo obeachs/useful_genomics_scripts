@@ -1280,29 +1280,30 @@ write.csv(clf_alp2_rna_down, '/Volumes/sesame/ALP_Omics/ChIP/validations/clf_dou
 # write.csv(scaled,'~/thesis_figs_and_tables/alp/rna/scaled_fpkm_mean_values.csv', quote=F)
 
 
-# all_me3 <- list.files('/Volumes/sesame/ALP_Omics/ChIP/2019_ChIP/epic2/default_params', pattern='me3_annotated_midpeak', full.names = T)
-# all_me3 <- list.files('/Volumes/sesame/joerecovery/Project_folder/alp_omics/2019_macs3', pattern='annotated.csv', full.names = T)
-# dataframe <-  data.frame('feature'=character(), 'Score'=numeric(), exp=character())
-# for(i in all_me3){
-#   title <- (gsub('_annotated_midpeak.csv','',basename(i)))
-#   title <- (gsub('_annotated.csv','',basename(i)))
-#   df <- read.csv(i)  %>% dplyr::select(feature, Score)%>% mutate(exp=title)
-#   print(head(df))
-#   dataframe <- rbind(dataframe, df)
-# }
+all_me3 <- list.files('/Volumes/sesame/ALP_Omics/ChIP/2019_ChIP/epic2/default_params', pattern='me3_annotated_midpeak.csv', full.names = T)
+#all_me3 <- list.files('/Volumes/sesame/joerecovery/Project_folder/alp_omics/2019_macs3', pattern='annotated.csv', full.names = T)
+dataframe <-  data.frame('feature'=character(), 'Score'=numeric(), exp=character())
+for(i in all_me3){
+  title <- (gsub('_annotated_midpeak.csv','',basename(i)))
+  title <- (gsub('_annotated.csv','',basename(i)))
+  df <- read.csv(i)  %>% dplyr::select(feature, log2FoldChange)%>% mutate(exp=title)
+  print(head(df))
+  dataframe <- rbind(dataframe, df)
+}
 
-# df <- dataframe %>%
-#   group_by(feature, exp) %>%
-#   summarise(Score = mean(Score))
-# me3_df_wide <- as.data.frame(pivot_wider(df, names_from = exp, values_from = c(Score)))
-# rownames(me3_df_wide) <- me3_df_wide$feature
-# me3_df_wide <- me3_df_wide %>% dplyr::select(!feature)
-# me3_df_wide <- as.matrix(me3_df_wide)
-# me3_scaled <- as.data.frame(t(scale(t(me3_df_wide)))) %>% na.omit()
-# write.csv(me3_scaled,'~/thesis_figs_and_tables/alp/rna/scaled_me3_mean_values.csv')
+df <- dataframe %>%
+  group_by(feature, exp) %>%
+  summarise(log2FoldChange = mean(log2FoldChange))
+me3_df_wide <- as.data.frame(pivot_wider(df, names_from = exp, values_from = c(log2FoldChange)))
+rownames(me3_df_wide) <- me3_df_wide$feature
+me3_df_wide <- me3_df_wide %>% dplyr::select(!feature)
+me3_df_wide <- me3_df_wide %>% drop_na()
+me3_df_wide_df <- as.data.frame(me3_df_wide)
+me3_scaled <- as.data.frame(t(scale(t(me3_df_wide)))) %>% na.omit()
+write.csv(me3_df_wide,'~/thesis_figs_and_tables/alp/rna/me3_mean_values_not_scaled.csv')
 
-me3_scaled <- read.csv('~/thesis_figs_and_tables/alp/rna/scaled_me3_mean_values.csv') %>% tibble::column_to_rownames('X') %>% 
-dplyr::select(clf, clf.alp1, clf.alp2, Col.0)
+me3_df <- read.csv('~/thesis_figs_and_tables/alp/rna/me3_mean_values_not_scaled.csv') %>% tibble::column_to_rownames('X')
+names(me3_df) <- c('clf_alp2','Col0','clf_alp1','clf')
 rna_scaled <- read.csv('~/thesis_figs_and_tables/alp/rna/scaled_fpkm_mean_values.csv') %>% tibble::column_to_rownames('X') %>% 
 dplyr::select(clf, clf.alp1, clf.alp2, Col.0)
 
@@ -1310,20 +1311,34 @@ swn_down_and_bound <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/validations/clf_d
 clf_up_genes <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/2019_ChIP/epic2/default_params/clf28_me3_diff_annotated_midpeak.csv') %>% filter(FC_KO >2)
 clf_down_genes <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/2019_ChIP/epic2/default_params/clf28_me3_diff_annotated_midpeak.csv') %>% filter(FC_KO < 0.5)
 clf_any_diff <- read.csv('/Volumes/sesame/ALP_Omics/ChIP/2019_ChIP/epic2/default_params/clf28_me3_diff_annotated_midpeak.csv')
-me3_scaled_clf_down <- me3_scaled %>% filter(rownames(me3_scaled) %in% clf_down_genes$feature)
+
+
+me3_scaled_clf_down <- me3_df %>% filter(rownames(me3_df) %in% clf_down_genes$feature) %>% filter(Col0 > clf) %>% 
+as.matrix()
+scaled_matrix <- t(apply(me3_scaled_clf_down, 1, scale, center = TRUE, scale = max(abs(me3_scaled_clf_down), na.rm = TRUE)))
+new_column_order <- c(4, 3, 1, 2)
+scaled_matrix <- scaled_matrix[, new_column_order]
+colnames(scaled_matrix) <- c('clf','clf_alp1','clf_alp2','Col0')
+
+
+
+
 scaled_clf_down <- rna_scaled %>% filter(rownames(rna_scaled) %in% rownames(me3_scaled_clf_down))
+
 me3_scaled_swn_down_and_bound <- me3_scaled %>% filter(rownames(me3_scaled) %in% swn_down_and_bound$x)
 scaled_swn_down_and_bound <- rna_scaled %>% filter(rownames(rna_scaled) %in% rownames(me3_scaled_swn_down_and_bound))
+
 me3_scaled_clf_up <- me3_scaled %>% filter(rownames(me3_scaled) %in% clf_up_genes$feature)
 scaled_clf_up <- rna_scaled %>% filter(rownames(rna_scaled) %in% rownames(me3_scaled_clf_up))
+
 me3_scaled_any_diff <- me3_scaled %>% filter(rownames(me3_scaled) %in% clf_any_diff$feature)
 scaled_any_diff <- rna_scaled %>% filter(rownames(rna_scaled) %in% rownames(me3_scaled_any_diff))
 
-p_me3 <- pheatmap::pheatmap(me3_scaled_swn_down_and_bound,treeheight_row = 0, color=colorRampPalette(c("#A6CEE3", "white", "#FF7F00"))(15),
+p_me3 <- pheatmap::pheatmap(scaled_matrix,treeheight_row = 0, color=colorRampPalette(c("#A6CEE3", "white", "#FF7F00"))(15),
               , fontsize_row = 7,fontsize_col = 10,
               cellheight = 1, cluster_cols=F,cluster_rows=F, angle_col = 90, show_rownames=FALSE,
               cellwidth=10)
-p_rna <- pheatmap::pheatmap(scaled_swn_down_and_bound,treeheight_row = 0, color=colorRampPalette(c("#A6CEE3", "white", "#FF7F00"))(15),
+p_rna <- pheatmap::pheatmap(scaled_clf_down,treeheight_row = 0, color=colorRampPalette(c("#A6CEE3", "white", "#FF7F00"))(15),
               , fontsize_row = 7,fontsize_col = 10,
               cellheight = 1, cluster_cols=F,cluster_rows=F, angle_col = 90, show_rownames=FALSE,
               cellwidth=10)
